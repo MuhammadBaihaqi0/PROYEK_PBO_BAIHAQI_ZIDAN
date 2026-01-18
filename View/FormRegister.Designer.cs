@@ -133,7 +133,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label6.ForeColor = System.Drawing.Color.Bisque;
             this.label6.Location = new System.Drawing.Point(384, 396);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(33, 13);
