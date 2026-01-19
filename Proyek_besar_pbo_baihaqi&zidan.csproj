@@ -133,12 +133,6 @@
     <Compile Include="View\ParentForm.Designer.cs">
       <DependentUpon>ParentForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Percobaan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Percobaan.Designer.cs">
-      <DependentUpon>Percobaan.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\StartUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,9 +157,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ParentForm.resx">
       <DependentUpon>ParentForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Percobaan.resx">
-      <DependentUpon>Percobaan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\StartUp.resx">
       <DependentUpon>StartUp.cs</DependentUpon>
