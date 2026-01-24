@@ -63,6 +63,26 @@ namespace Proyek_besar_pbo_baihaqi_zidan.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ff {
+            get {
+                object obj = ResourceManager.GetObject("ff", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ml {
+            get {
+                object obj = ResourceManager.GetObject("ml", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap password_28_32 {
             get {
                 object obj = ResourceManager.GetObject("password-28-32", resourceCulture);
@@ -76,6 +96,16 @@ namespace Proyek_besar_pbo_baihaqi_zidan.Properties {
         internal static System.Drawing.Bitmap pendapatan_pubg_mobile_legends_free_fire {
             get {
                 object obj = ResourceManager.GetObject("pendapatan-pubg-mobile-legends-free-fire", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pubg {
+            get {
+                object obj = ResourceManager.GetObject("pubg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

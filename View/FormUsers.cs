@@ -14,19 +14,20 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
     public partial class FormUsers : Form
     {
         Koneksi koneksi = new Koneksi();
-        string id_user; // simpan id saat klik tabel
+        string id_user;
+        string roleUser;
 
-        public FormUsers()
+        public FormUsers(string role)
         {
             InitializeComponent();
+            roleUser = role;
 
-            // SET SEBAGAI CHILD FORM (MDI)
+            // SET SEBAGAI CHILD FORM
             this.TopLevel = false;
             this.FormBorderStyle = FormBorderStyle.None;
             this.Dock = DockStyle.Fill;
         }
 
-        // ================= LOAD FORM =================
         private void FormUsers_Load(object sender, EventArgs e)
         {
             // isi combo role
@@ -37,14 +38,12 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
             TampilData();
         }
 
-        // ================= TAMPIL DATA =================
         void TampilData()
         {
             dataGridView1.DataSource =
                 koneksi.ShowData("SELECT * FROM users");
         }
 
-        // ================= RESET FORM =================
         void ResetForm()
         {
             tbUsername.Clear();
@@ -54,7 +53,6 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
             id_user = null;
         }
 
-        // ================= SIMPAN =================
         private void btnSimpan_Click(object sender, EventArgs e)
         {
             if (
@@ -77,20 +75,17 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
                 ")";
 
             koneksi.ShowData(query);
-
             MessageBox.Show("Data user berhasil ditambahkan");
 
             TampilData();
             ResetForm();
         }
 
-        // ================= KLIK TABEL =================
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
-
                 id_user = row.Cells["id_user"].Value.ToString();
                 tbUsername.Text = row.Cells["username"].Value.ToString();
                 tbPassword.Text = row.Cells["password"].Value.ToString();
@@ -99,7 +94,6 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
             }
         }
 
-        // ================= UBAH =================
         private void btnUbah_Click(object sender, EventArgs e)
         {
             if (id_user == null)
@@ -117,14 +111,12 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
                 "WHERE id_user=" + id_user;
 
             koneksi.ShowData(query);
-
             MessageBox.Show("Data user berhasil diubah");
 
             TampilData();
             ResetForm();
         }
 
-        // ================= HAPUS =================
         private void btnHapus_Click(object sender, EventArgs e)
         {
             if (id_user == null)
@@ -133,28 +125,22 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
                 return;
             }
 
-            DialogResult dialog = MessageBox.Show(
+            if (MessageBox.Show(
                 "Yakin ingin menghapus data ini?",
                 "Konfirmasi",
                 MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question
-            );
-
-            if (dialog == DialogResult.Yes)
+                MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                string query =
-                    "DELETE FROM users WHERE id_user=" + id_user;
-
-                koneksi.ShowData(query);
+                koneksi.ShowData(
+                    "DELETE FROM users WHERE id_user=" + id_user
+                );
 
                 MessageBox.Show("Data user berhasil dihapus");
-
                 TampilData();
                 ResetForm();
             }
         }
 
-        // ================= REFRESH =================
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             TampilData();
