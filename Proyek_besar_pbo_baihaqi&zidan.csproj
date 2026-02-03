@@ -153,6 +153,7 @@
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Form1.resx">
@@ -200,16 +201,34 @@
     <None Include="Resources\username-1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\s.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\password-28-32.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\pendapatan-pubg-mobile-legends-free-fire.jpg" />
+    <None Include="Resources\Miya MLBB HD _Moonlight Archer.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Miya MLBB HD _Moonlight Archer.jpg" />
+    <None Include="Resources\PUBG____.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wallpaper-point-blank-zepetto-5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\valorant.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foto-jawapos-2025-10-30T125312286-2591366051.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toko - Edited.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Iklan\1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Iklan\2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

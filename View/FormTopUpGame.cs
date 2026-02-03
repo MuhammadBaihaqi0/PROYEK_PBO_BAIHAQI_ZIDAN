@@ -12,7 +12,8 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
 {
     public partial class FormTopUpGame : Form
     {
-        public FormTopUpGame()
+
+        public FormTopUpGame(string v)
         {
             InitializeComponent();
 
@@ -41,9 +42,7 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
         }
         private void FormTopUpGame_Load(object sender, EventArgs e)
         {
-            pbML.Image = Properties.Resources.ml;
-            pbFF.Image = Properties.Resources.ff;
-            pbPUBG.Image = Properties.Resources.pubg;
+          
         }
 
         private void pbML_Click_1(object sender, EventArgs e)
@@ -70,5 +69,45 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
         {
 
         }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void label1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_MouseEnter(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.LightBlue;
+        }
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.DarkOrchid;
+        }
+
+        private void button1_MouseHover(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

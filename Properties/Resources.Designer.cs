@@ -63,9 +63,29 @@ namespace Proyek_besar_pbo_baihaqi_zidan.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap download {
+            get {
+                object obj = ResourceManager.GetObject("download", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ff {
             get {
                 object obj = ResourceManager.GetObject("ff", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap foto_jawapos_2025_10_30T125312286_2591366051 {
+            get {
+                object obj = ResourceManager.GetObject("foto-jawapos-2025-10-30T125312286-2591366051", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,16 +123,6 @@ namespace Proyek_besar_pbo_baihaqi_zidan.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pendapatan_pubg_mobile_legends_free_fire {
-            get {
-                object obj = ResourceManager.GetObject("pendapatan-pubg-mobile-legends-free-fire", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap pubg {
             get {
                 object obj = ResourceManager.GetObject("pubg", resourceCulture);
@@ -123,9 +133,19 @@ namespace Proyek_besar_pbo_baihaqi_zidan.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap s {
+        internal static System.Drawing.Bitmap PUBG____ {
             get {
-                object obj = ResourceManager.GetObject("s", resourceCulture);
+                object obj = ResourceManager.GetObject("PUBG____", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap toko___Edited {
+            get {
+                object obj = ResourceManager.GetObject("toko - Edited", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -136,6 +156,26 @@ namespace Proyek_besar_pbo_baihaqi_zidan.Properties {
         internal static System.Drawing.Bitmap username_1 {
             get {
                 object obj = ResourceManager.GetObject("username-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap valorant {
+            get {
+                object obj = ResourceManager.GetObject("valorant", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wallpaper_point_blank_zepetto_5 {
+            get {
+                object obj = ResourceManager.GetObject("wallpaper-point-blank-zepetto-5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
