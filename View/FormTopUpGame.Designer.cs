@@ -28,27 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelHeader = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.flowGames = new System.Windows.Forms.FlowLayoutPanel();
-            this.crdML = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pbML = new System.Windows.Forms.PictureBox();
-            this.crdFF = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pbFF = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pbPUBG = new System.Windows.Forms.PictureBox();
+            this.panelHeader = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panelHeader.SuspendLayout();
-            this.flowGames.SuspendLayout();
-            this.crdML.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbML)).BeginInit();
-            this.crdFF.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFF)).BeginInit();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPUBG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(521, 20);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(139, 25);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "TOP UP GAME";
             // 
             // panelHeader
             // 
@@ -56,180 +63,110 @@
             this.panelHeader.Controls.Add(this.lblTitle);
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader.Location = new System.Drawing.Point(0, 0);
+            this.panelHeader.Margin = new System.Windows.Forms.Padding(2);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(800, 100);
+            this.panelHeader.Size = new System.Drawing.Size(1210, 65);
             this.panelHeader.TabIndex = 0;
             // 
-            // lblTitle
+            // pictureBox1
             // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(20, 18);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(205, 38);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "TOP UP GAME";
+            this.pictureBox1.Image = global::Proyek_besar_pbo_baihaqi_zidan.Properties.Resources.Miya_MLBB_HD__Moonlight_Archer;
+            this.pictureBox1.Location = new System.Drawing.Point(44, 86);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(142, 265);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
-            // flowGames
+            // pictureBox2
             // 
-            this.flowGames.AutoScroll = true;
-            this.flowGames.BackColor = System.Drawing.Color.Transparent;
-            this.flowGames.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowGames.Controls.Add(this.crdML);
-            this.flowGames.Controls.Add(this.crdFF);
-            this.flowGames.Controls.Add(this.panel2);
-            this.flowGames.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.flowGames.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowGames.Location = new System.Drawing.Point(0, 100);
-            this.flowGames.Name = "flowGames";
-            this.flowGames.Size = new System.Drawing.Size(800, 347);
-            this.flowGames.TabIndex = 1;
-            this.flowGames.Paint += new System.Windows.Forms.PaintEventHandler(this.FlowGames_Paint);
+            this.pictureBox2.Image = global::Proyek_besar_pbo_baihaqi_zidan.Properties.Resources.Miya_MLBB_HD__Moonlight_Archer;
+            this.pictureBox2.Location = new System.Drawing.Point(242, 86);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(142, 265);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
             // 
-            // crdML
+            // pictureBox3
             // 
-            this.crdML.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(63)))), ((int)(((byte)(92)))));
-            this.crdML.Controls.Add(this.label1);
-            this.crdML.Controls.Add(this.pbML);
-            this.crdML.Location = new System.Drawing.Point(3, 3);
-            this.crdML.Name = "crdML";
-            this.crdML.Size = new System.Drawing.Size(130, 132);
-            this.crdML.TabIndex = 0;
+            this.pictureBox3.Image = global::Proyek_besar_pbo_baihaqi_zidan.Properties.Resources.Miya_MLBB_HD__Moonlight_Archer;
+            this.pictureBox3.Location = new System.Drawing.Point(447, 86);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(142, 265);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
             // 
-            // label1
+            // pictureBox4
             // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(0, 90);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 21);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Mobile Lagends";
+            this.pictureBox4.Image = global::Proyek_besar_pbo_baihaqi_zidan.Properties.Resources.Miya_MLBB_HD__Moonlight_Archer;
+            this.pictureBox4.Location = new System.Drawing.Point(1029, 86);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(142, 265);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 4;
+            this.pictureBox4.TabStop = false;
             // 
-            // pbML
+            // pictureBox5
             // 
-            this.pbML.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pbML.ErrorImage = global::Proyek_besar_pbo_baihaqi_zidan.Properties.Resources.ml;
-            this.pbML.Location = new System.Drawing.Point(0, 0);
-            this.pbML.Name = "pbML";
-            this.pbML.Size = new System.Drawing.Size(130, 132);
-            this.pbML.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbML.TabIndex = 0;
-            this.pbML.TabStop = false;
-            this.pbML.Click += new System.EventHandler(this.pbML_Click_1);
+            this.pictureBox5.Image = global::Proyek_besar_pbo_baihaqi_zidan.Properties.Resources.Miya_MLBB_HD__Moonlight_Archer;
+            this.pictureBox5.Location = new System.Drawing.Point(648, 86);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(142, 265);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 5;
+            this.pictureBox5.TabStop = false;
             // 
-            // crdFF
+            // pictureBox6
             // 
-            this.crdFF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(63)))), ((int)(((byte)(92)))));
-            this.crdFF.Controls.Add(this.label2);
-            this.crdFF.Controls.Add(this.pbFF);
-            this.crdFF.Location = new System.Drawing.Point(139, 3);
-            this.crdFF.Name = "crdFF";
-            this.crdFF.Size = new System.Drawing.Size(130, 132);
-            this.crdFF.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(0, 111);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 21);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Free Fire";
-            // 
-            // pbFF
-            // 
-            this.pbFF.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pbFF.ErrorImage = global::Proyek_besar_pbo_baihaqi_zidan.Properties.Resources.ff;
-            this.pbFF.Location = new System.Drawing.Point(0, 0);
-            this.pbFF.Name = "pbFF";
-            this.pbFF.Size = new System.Drawing.Size(130, 132);
-            this.pbFF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbFF.TabIndex = 0;
-            this.pbFF.TabStop = false;
-            this.pbFF.Click += new System.EventHandler(this.pbFF_Click_1);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(63)))), ((int)(((byte)(92)))));
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.pbPUBG);
-            this.panel2.Location = new System.Drawing.Point(275, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(130, 132);
-            this.panel2.TabIndex = 2;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(0, 111);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 21);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "PUBG";
-            // 
-            // pbPUBG
-            // 
-            this.pbPUBG.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pbPUBG.ErrorImage = global::Proyek_besar_pbo_baihaqi_zidan.Properties.Resources.pubg;
-            this.pbPUBG.Location = new System.Drawing.Point(0, 0);
-            this.pbPUBG.Name = "pbPUBG";
-            this.pbPUBG.Size = new System.Drawing.Size(130, 132);
-            this.pbPUBG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbPUBG.TabIndex = 1;
-            this.pbPUBG.TabStop = false;
-            this.pbPUBG.Click += new System.EventHandler(this.pbPUBG_Click_1);
+            this.pictureBox6.Image = global::Proyek_besar_pbo_baihaqi_zidan.Properties.Resources.Miya_MLBB_HD__Moonlight_Archer;
+            this.pictureBox6.Location = new System.Drawing.Point(842, 86);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(142, 265);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 6;
+            this.pictureBox6.TabStop = false;
             // 
             // FormTopUpGame
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.flowGames);
+            this.ClientSize = new System.Drawing.Size(1210, 583);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panelHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormTopUpGame";
             this.Text = "FormTopUpGame";
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
-            this.flowGames.ResumeLayout(false);
-            this.crdML.ResumeLayout(false);
-            this.crdML.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbML)).EndInit();
-            this.crdFF.ResumeLayout(false);
-            this.crdFF.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFF)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPUBG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panelHeader;
-        private System.Windows.Forms.FlowLayoutPanel flowGames;
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.Panel crdML;
-        private System.Windows.Forms.PictureBox pbML;
-        private System.Windows.Forms.Panel crdFF;
-        private System.Windows.Forms.PictureBox pbFF;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pbPUBG;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panelHeader;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }

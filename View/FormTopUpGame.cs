@@ -60,5 +60,15 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
         {
             OpenItem(2, "Free Fire");
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

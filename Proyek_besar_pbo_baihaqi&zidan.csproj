@@ -208,5 +208,8 @@
   <ItemGroup>
     <None Include="Resources\pendapatan-pubg-mobile-legends-free-fire.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Miya MLBB HD _Moonlight Archer.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

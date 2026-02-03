@@ -73,6 +73,16 @@ namespace Proyek_besar_pbo_baihaqi_zidan.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Miya_MLBB_HD__Moonlight_Archer {
+            get {
+                object obj = ResourceManager.GetObject("Miya MLBB HD _Moonlight Archer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ml {
             get {
                 object obj = ResourceManager.GetObject("ml", resourceCulture);
