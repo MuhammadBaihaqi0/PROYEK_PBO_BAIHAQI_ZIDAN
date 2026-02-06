@@ -87,7 +87,7 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            OpenItem(1, "Mobile Legends");
         }
 
         private void button1_MouseEnter(object sender, EventArgs e)
@@ -109,5 +109,29 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
 
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            OpenItem(2, "Free Fire");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            OpenItem(4, "Point Blank");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            OpenItem(5, "Valorant");
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            OpenItem(3, "PUBG Mobile");
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            OpenItem(6, "Roblox");
+        }
     }
 }
