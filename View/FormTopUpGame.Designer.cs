@@ -228,6 +228,7 @@
             // 
             // pictureBox6
             // 
+            this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox6.Image = global::Proyek_besar_pbo_baihaqi_zidan.Properties.Resources.valorant;
             this.pictureBox6.Location = new System.Drawing.Point(842, 86);
             this.pictureBox6.Name = "pictureBox6";
@@ -235,9 +236,11 @@
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 6;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // pictureBox5
             // 
+            this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox5.Image = global::Proyek_besar_pbo_baihaqi_zidan.Properties.Resources.wallpaper_point_blank_zepetto_5;
             this.pictureBox5.Location = new System.Drawing.Point(648, 86);
             this.pictureBox5.Name = "pictureBox5";
@@ -245,9 +248,11 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 5;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // pictureBox4
             // 
+            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox4.Image = global::Proyek_besar_pbo_baihaqi_zidan.Properties.Resources.foto_jawapos_2025_10_30T125312286_2591366051;
             this.pictureBox4.Location = new System.Drawing.Point(1029, 86);
             this.pictureBox4.Name = "pictureBox4";
@@ -255,9 +260,11 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 4;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox3
             // 
+            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox3.Image = global::Proyek_besar_pbo_baihaqi_zidan.Properties.Resources.download;
             this.pictureBox3.Location = new System.Drawing.Point(447, 86);
             this.pictureBox3.Name = "pictureBox3";
@@ -265,9 +272,11 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox2.Image = global::Proyek_besar_pbo_baihaqi_zidan.Properties.Resources.PUBG____;
             this.pictureBox2.Location = new System.Drawing.Point(242, 86);
             this.pictureBox2.Name = "pictureBox2";
@@ -275,9 +284,11 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = global::Proyek_besar_pbo_baihaqi_zidan.Properties.Resources.Miya_MLBB_HD__Moonlight_Archer;
             this.pictureBox1.Location = new System.Drawing.Point(44, 86);
             this.pictureBox1.Name = "pictureBox1";
@@ -285,6 +296,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // FormTopUpGame
             // 

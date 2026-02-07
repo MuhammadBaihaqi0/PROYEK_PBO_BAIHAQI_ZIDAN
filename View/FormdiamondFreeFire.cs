@@ -43,5 +43,50 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
         {
 
         }
+
+        private void panel5_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("" +
+               "Jumlah Diamond : 10\nHarga : Rp 2.000",
+               "Informasi",
+               MessageBoxButtons.OK,
+               MessageBoxIcon.Information);
+        }
+
+        private void panel3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("" +
+               "Jumlah Diamond : 50\nHarga : Rp 8.000",
+               "Informasi",
+               MessageBoxButtons.OK,
+               MessageBoxIcon.Information);
+        }
+
+        private void panel2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("" +
+               "Jumlah Diamond : 100\nHarga : Rp 16.000",
+               "Informasi",
+               MessageBoxButtons.OK,
+               MessageBoxIcon.Information);
+        }
+
+        private void panel4_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("" +
+               "Jumlah Diamond : 200\nHarga : Rp 32.000",
+               "Informasi",
+               MessageBoxButtons.OK,
+               MessageBoxIcon.Information);
+        }
+
+        private void panel6_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("" +
+               "Jumlah Diamond : 1000\nHarga : Rp 160.000",
+               "Informasi",
+               MessageBoxButtons.OK,
+               MessageBoxIcon.Information);
+        }
     }
 }

@@ -38,5 +38,50 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
         {
 
         }
+
+        private void panel4_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("" +
+                "Jumlah Gift : 45,000\nHarga : Rp 45.000",
+                "Informasi",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
+        }
+
+        private void panel5_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("" +
+                "Jumlah Gift : 75,000\nHarga : Rp 75.000",
+                "Informasi",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
+        }
+
+        private void panel3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("" +
+                "Jumlah Gift : 149,000\nHarga : Rp 149.000",
+                "Informasi",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
+        }
+
+        private void panel6_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("" +
+                "Jumlah Gift : 300,000\nHarga : Rp 300.000",
+                "Informasi",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
+        }
+
+        private void panel2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("" +
+                "Jumlah Gift : 600,000\nHarga : Rp 600.000",
+                "Informasi",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
+        }
     }
 }

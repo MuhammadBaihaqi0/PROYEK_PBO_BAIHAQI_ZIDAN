@@ -109,6 +109,7 @@
             // btnRegister
             // 
             this.btnRegister.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnRegister.Font = new System.Drawing.Font("Impact", 12F);
             this.btnRegister.ForeColor = System.Drawing.Color.Transparent;
             this.btnRegister.Location = new System.Drawing.Point(266, 328);
             this.btnRegister.Name = "btnRegister";
