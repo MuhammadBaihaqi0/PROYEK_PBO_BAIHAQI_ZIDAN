@@ -16,5 +16,34 @@ namespace Proyek_besar_pbo_baihaqi_zidan
         {
             InitializeComponent();
         }
+
+        private void SetErrorMessage(TextBox textBox, string message)
+        {
+            warning.SetError(textBox, message);
+        }
+
+        private void textBox3_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox3.Text))
+            {
+                SetErrorMessage(textBox3, "Nomor ID tidak boleh kosong.");
+            }
+            else
+            {
+                SetErrorMessage(textBox3, string.Empty);
+            }
+        }
+
+        private void textBox4_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox4.Text))
+            {
+                SetErrorMessage(textBox4, "Jumlah diamond tidak boleh kosong.");
+            }
+            else
+            {
+                SetErrorMessage(textBox4, string.Empty);
+            }
+        }
     }
 }

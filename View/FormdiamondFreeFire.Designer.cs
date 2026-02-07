@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormdiamondFreeFire));
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -53,6 +55,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.warning = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.groupBox4.SuspendLayout();
@@ -65,6 +68,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.warning)).BeginInit();
             this.SuspendLayout();
             // 
             // label12
@@ -105,7 +109,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::Proyek_besar_pbo_baihaqi_zidan.Properties.Resources.ff_dm;
-            this.pictureBox5.Location = new System.Drawing.Point(0, 9);
+            this.pictureBox5.Location = new System.Drawing.Point(6, 9);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(65, 63);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -150,7 +154,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::Proyek_besar_pbo_baihaqi_zidan.Properties.Resources.ff_dm;
-            this.pictureBox4.Location = new System.Drawing.Point(0, 9);
+            this.pictureBox4.Location = new System.Drawing.Point(6, 9);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(65, 63);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -195,7 +199,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Proyek_besar_pbo_baihaqi_zidan.Properties.Resources.ff_dm;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 9);
+            this.pictureBox3.Location = new System.Drawing.Point(6, 9);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(65, 63);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -240,7 +244,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Proyek_besar_pbo_baihaqi_zidan.Properties.Resources.ff_dm;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 9);
+            this.pictureBox2.Location = new System.Drawing.Point(6, 9);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(65, 63);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -285,7 +289,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Proyek_besar_pbo_baihaqi_zidan.Properties.Resources.ff_dm;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(6, 9);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(65, 63);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -295,39 +299,44 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(55, 88);
+            this.label1.Location = new System.Drawing.Point(513, 26);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 13);
+            this.label1.Size = new System.Drawing.Size(67, 20);
             this.label1.TabIndex = 9;
             this.label1.Text = "ID Player";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(155, 85);
+            this.textBox2.Location = new System.Drawing.Point(584, 26);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(114, 20);
             this.textBox2.TabIndex = 6;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.label3.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(81, 21);
+            this.label3.Location = new System.Drawing.Point(81, 24);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(172, 24);
+            this.label3.Size = new System.Drawing.Size(133, 23);
             this.label3.TabIndex = 0;
             this.label3.Text = "Top Up Free Fire";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox6);
             this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.textBox2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
@@ -345,15 +354,18 @@
             this.pictureBox6.TabIndex = 29;
             this.pictureBox6.TabStop = false;
             // 
+            // warning
+            // 
+            this.warning.ContainerControl = this;
+            this.warning.Icon = ((System.Drawing.Icon)(resources.GetObject("warning.Icon")));
+            // 
             // FormdiamondFreeFire
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox5);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -361,6 +373,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FormdiamondFreeFire";
             this.Text = "FormdiamondFreeFire";
+            this.Load += new System.EventHandler(this.FormdiamondFreeFire_Load);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -379,8 +392,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.warning)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -411,5 +424,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.ErrorProvider warning;
     }
 }

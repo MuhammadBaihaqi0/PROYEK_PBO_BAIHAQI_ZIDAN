@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Proyek_besar_pbo_baihaqi_zidan.View
 {
-    public partial class FormdiamondFreeFire : Form
+    public partial class Roblox : Form
     {
-        public FormdiamondFreeFire()
+        public Roblox()
         {
             InitializeComponent();
-        }
-
-        private void FormdiamondFreeFire_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void SetErrorMessage(TextBox textBox, string message)
@@ -31,7 +26,7 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
         {
             if (string.IsNullOrWhiteSpace(textBox2.Text))
             {
-                SetErrorMessage(textBox2, "Nomor ID tidak boleh kosong.");
+                SetErrorMessage(textBox2, "Email tidak boleh kosong.");
             }
             else
             {
@@ -39,7 +34,7 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
             }
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void Roblox_Load(object sender, EventArgs e)
         {
 
         }

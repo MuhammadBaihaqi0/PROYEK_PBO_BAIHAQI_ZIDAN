@@ -163,6 +163,16 @@ namespace Proyek_besar_pbo_baihaqi_zidan.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap roblox {
+            get {
+                object obj = ResourceManager.GetObject("roblox", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap toko___Edited {
             get {
                 object obj = ResourceManager.GetObject("toko - Edited", resourceCulture);
@@ -196,6 +206,16 @@ namespace Proyek_besar_pbo_baihaqi_zidan.Properties {
         internal static System.Drawing.Bitmap valorant {
             get {
                 object obj = ResourceManager.GetObject("valorant", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap valorant1 {
+            get {
+                object obj = ResourceManager.GetObject("valorant1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

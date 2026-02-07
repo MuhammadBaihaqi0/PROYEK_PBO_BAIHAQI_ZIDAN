@@ -46,12 +46,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Impact", 20F);
             this.label1.Location = new System.Drawing.Point(27, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(386, 29);
+            this.label1.Size = new System.Drawing.Size(348, 34);
             this.label1.TabIndex = 3;
-            this.label1.Text = "TOP UP GAMES SIMULATIONS";
+            this.label1.Text = "ZB TOP UP GAMES SIMULATIONS";
             // 
             // timer1
             // 

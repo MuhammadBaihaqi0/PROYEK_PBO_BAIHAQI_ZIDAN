@@ -157,11 +157,23 @@
     <Compile Include="View\PUBG.Designer.cs">
       <DependentUpon>PUBG.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Roblox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Roblox.Designer.cs">
+      <DependentUpon>Roblox.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\StartUp.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\StartUp.Designer.cs">
       <DependentUpon>StartUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Valorant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Valorant.Designer.cs">
+      <DependentUpon>Valorant.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="View\FormdiamondFreeFire.resx">
       <DependentUpon>FormdiamondFreeFire.cs</DependentUpon>
@@ -195,8 +207,14 @@
     <EmbeddedResource Include="View\PUBG.resx">
       <DependentUpon>PUBG.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Roblox.resx">
+      <DependentUpon>Roblox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\StartUp.resx">
       <DependentUpon>StartUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Valorant.resx">
+      <DependentUpon>Valorant.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -259,6 +277,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pb.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\valorant1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\roblox.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

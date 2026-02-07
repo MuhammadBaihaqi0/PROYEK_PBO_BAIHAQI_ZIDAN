@@ -121,8 +121,20 @@
   <data name="pubg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pubg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="pb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pb.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ff dm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ff dm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Weekly_Diamond_Pass_Mobile_Legend_Black_Screen-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Weekly_Diamond_Pass_Mobile_Legend_Black_Screen-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="valorant1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\valorant1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="roblox" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\roblox.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="valorant" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\valorant.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -159,11 +171,5 @@
   </data>
   <data name="toko - Edited" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\toko - Edited.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ff dm" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ff dm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pb" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pb.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -16,5 +16,29 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
         {
             InitializeComponent();
         }
+
+        private void setErrorMessage(TextBox textBox, string message)
+        {
+            warning.SetError(textBox, message);
+        }
+
+
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox2.Text))
+            {
+                setErrorMessage(textBox2, "Nomor ID tidak boleh kosong.");
+            }
+            else
+            {
+                setErrorMessage(textBox2, string.Empty);
+            }
+        }
     }
 }

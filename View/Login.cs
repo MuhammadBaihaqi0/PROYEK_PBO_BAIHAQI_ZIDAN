@@ -96,6 +96,14 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
             tbPassword.UseSystemPasswordChar = !Cekpass.Checked;
         }
 
-        
+        private void btnLogin_MouseEnter(object sender, EventArgs e)
+        {
+           btnLogin.BackColor = Color.DarkOrchid;
+        }
+
+        private void btnLogin_MouseLeave(object sender, EventArgs e)
+        {
+            btnLogin.BackColor = Color.DarkSlateBlue;
+        }
     }
 }

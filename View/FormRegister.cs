@@ -24,12 +24,14 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
         {
             Login formLogin = new Login();
             formLogin.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void FormRegister_Load(object sender, EventArgs e)
         {
-
+            tbPassword.UseSystemPasswordChar = true;
+            tbConfirm.UseSystemPasswordChar = true;
+            Cekpass.Checked = false;
         }
 
 
@@ -107,6 +109,29 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
                     MessageBoxIcon.Error
                 );
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Cekpass_CheckedChanged(object sender, EventArgs e)
+        {
+            bool hideChar = !Cekpass.Checked;
+
+            tbPassword.UseSystemPasswordChar = hideChar;
+            tbConfirm.UseSystemPasswordChar = hideChar;
+        }
+
+        private void btnRegister_MouseEnter(object sender, EventArgs e)
+        {
+            btnRegister.BackColor = Color.DarkOrchid;
+        }
+
+        private void btnRegister_MouseLeave(object sender, EventArgs e)
+        {
+            btnRegister.BackColor = Color.DarkSlateBlue;
         }
     }
 }

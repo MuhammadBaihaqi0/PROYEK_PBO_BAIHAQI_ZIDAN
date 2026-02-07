@@ -21,6 +21,19 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
             this.TopLevel = false;
             this.FormBorderStyle = FormBorderStyle.None;
             this.Dock = DockStyle.Fill;
+
+            button1.MouseEnter += AllButtons_MouseEnter;
+            button1.MouseLeave += AllButtons_MouseLeave;
+            button2.MouseEnter += AllButtons_MouseEnter;
+            button2.MouseLeave += AllButtons_MouseLeave;
+            button3.MouseEnter += AllButtons_MouseEnter;
+            button3.MouseLeave += AllButtons_MouseLeave;
+            button4.MouseEnter += AllButtons_MouseEnter;
+            button4.MouseLeave += AllButtons_MouseLeave;
+            button5.MouseEnter += AllButtons_MouseEnter;
+            button5.MouseLeave += AllButtons_MouseLeave;
+            button6.MouseEnter += AllButtons_MouseEnter;
+            button6.MouseLeave += AllButtons_MouseLeave;
         }
 
 
@@ -28,31 +41,48 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
         {
             FormdiamondML diamondML = new FormdiamondML();
             diamondML.Show();
-            this.Close();
         }
 
-        private void button1_MouseEnter(object sender, EventArgs e)
+        private void AllButtons_MouseEnter(object sender, EventArgs e)
         {
-            button1.BackColor = Color.LightBlue;
+            Button btn = (Button)sender;
+            btn.BackColor = Color.DarkOrchid;
         }
 
-        private void button1_MouseLeave(object sender, EventArgs e)
+        private void AllButtons_MouseLeave(object sender, EventArgs e)
         {
-            button1.BackColor = Color.DarkOrchid;
+            Button btn = (Button)sender;
+            btn.BackColor = Color.DarkSlateBlue;
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             PUBG pubg = new PUBG();
             pubg.Show();
-            this.Close();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             FormdiamondFreeFire diamondFF = new FormdiamondFreeFire();
             diamondFF.Show();
-            this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            PB pb  = new PB();
+            pb.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Valorant valorant = new Valorant();
+            valorant.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Roblox roblox = new Roblox();
+            roblox.Show();
         }
     }
 }

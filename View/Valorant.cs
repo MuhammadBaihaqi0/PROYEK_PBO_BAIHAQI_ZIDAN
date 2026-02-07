@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Proyek_besar_pbo_baihaqi_zidan.View
 {
-    public partial class FormdiamondFreeFire : Form
+    public partial class Valorant : Form
     {
-        public FormdiamondFreeFire()
+        public Valorant()
         {
             InitializeComponent();
-        }
-
-        private void FormdiamondFreeFire_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void SetErrorMessage(TextBox textBox, string message)
@@ -27,21 +22,21 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
             warning.SetError(textBox, message);
         }
 
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void textBox2_Leave(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(textBox2.Text))
             {
-                SetErrorMessage(textBox2, "Nomor ID tidak boleh kosong.");
+                SetErrorMessage(textBox2, "Riot ID tidak boleh kosong.");
             }
             else
             {
                 SetErrorMessage(textBox2, string.Empty);
             }
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
