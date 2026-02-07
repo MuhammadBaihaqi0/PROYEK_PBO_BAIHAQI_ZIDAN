@@ -127,11 +127,11 @@
     <Compile Include="View\FormTopUpGame.Designer.cs">
       <DependentUpon>FormTopUpGame.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormUsers.cs">
+    <Compile Include="View\FormUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormUsers.Designer.cs">
-      <DependentUpon>FormUsers.cs</DependentUpon>
+    <Compile Include="View\FormUser.Designer.cs">
+      <DependentUpon>FormUser.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Login.cs">
       <SubType>Form</SubType>
@@ -192,8 +192,8 @@
     <EmbeddedResource Include="View\FormTopUpGame.resx">
       <DependentUpon>FormTopUpGame.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormUsers.resx">
-      <DependentUpon>FormUsers.cs</DependentUpon>
+    <EmbeddedResource Include="View\FormUser.resx">
+      <DependentUpon>FormUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

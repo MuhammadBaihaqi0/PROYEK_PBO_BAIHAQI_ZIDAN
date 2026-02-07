@@ -1,5 +1,4 @@
-﻿using Proyek_besar_pbo_baihaqi_zidan.Controller;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,29 +7,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Proyek_besar_pbo_baihaqi_zidan.Controller;
 
 namespace Proyek_besar_pbo_baihaqi_zidan.View
 {
-    public partial class FormUsers : Form
+    public partial class FormUser : Form
     {
         Koneksi koneksi = new Koneksi();
         string id_user;
         string roleUser;
 
-        public FormUsers(string role)
+        public FormUser()
         {
             InitializeComponent();
-            roleUser = role;
+            roleUser = roleUser;
 
-            // SET SEBAGAI CHILD FORM
             this.TopLevel = false;
             this.FormBorderStyle = FormBorderStyle.None;
             this.Dock = DockStyle.Fill;
         }
 
-        private void FormUsers_Load(object sender, EventArgs e)
+        private void groupBox2_Enter(object sender, EventArgs e)
         {
-            // isi combo role
+
+        }
+
+        private void FormUser_Load(object sender, EventArgs e)
+        {
             cbRole.Items.Clear();
             cbRole.Items.Add("Admin");
             cbRole.Items.Add("User");
@@ -40,7 +43,7 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
 
         void TampilData()
         {
-            dataGridView1.DataSource =
+            DataUser.DataSource =
                 koneksi.ShowData("SELECT * FROM users");
         }
 
@@ -48,7 +51,6 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
         {
             tbUsername.Clear();
             tbPassword.Clear();
-            tbSaldo.Clear();
             cbRole.SelectedIndex = -1;
             id_user = null;
         }
@@ -56,11 +58,10 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
         private void btnSimpan_Click(object sender, EventArgs e)
         {
             if (
-                tbUsername.Text == "" ||
-                tbPassword.Text == "" ||
-                tbSaldo.Text == "" ||
-                cbRole.Text == ""
-            )
+               tbUsername.Text == "" ||
+               tbPassword.Text == "" ||
+               cbRole.Text == ""
+           )
             {
                 MessageBox.Show("Semua field wajib diisi");
                 return;
@@ -70,7 +71,6 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
                 "INSERT INTO users (username, password, saldo, role) VALUES (" +
                 "'" + tbUsername.Text + "', " +
                 "'" + tbPassword.Text + "', " +
-                tbSaldo.Text + ", " +
                 "'" + cbRole.Text + "'" +
                 ")";
 
@@ -81,15 +81,14 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
             ResetForm();
         }
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void DataUser_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
-                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+                DataGridViewRow row = DataUser.Rows[e.RowIndex];
                 id_user = row.Cells["id_user"].Value.ToString();
                 tbUsername.Text = row.Cells["username"].Value.ToString();
                 tbPassword.Text = row.Cells["password"].Value.ToString();
-                tbSaldo.Text = row.Cells["saldo"].Value.ToString();
                 cbRole.Text = row.Cells["role"].Value.ToString();
             }
         }
@@ -106,7 +105,6 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
                 "UPDATE users SET " +
                 "username='" + tbUsername.Text + "', " +
                 "password='" + tbPassword.Text + "', " +
-                "saldo=" + tbSaldo.Text + ", " +
                 "role='" + cbRole.Text + "' " +
                 "WHERE id_user=" + id_user;
 

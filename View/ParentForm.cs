@@ -49,7 +49,7 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
             }
 
             // buka FormUsers (HANYA ADMIN)
-            FormUsers users = new FormUsers(roleUser);
+            FormUser users = new FormUser(roleUser);
             users.MdiParent = this;
             users.Show();
         }
