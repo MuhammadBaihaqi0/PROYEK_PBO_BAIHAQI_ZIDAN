@@ -46,12 +46,15 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.warning = new System.Windows.Forms.ErrorProvider(this.components);
-            this.beli = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.lblSummaryPlayer = new System.Windows.Forms.Label();
+            this.lblSummaryItem = new System.Windows.Forms.Label();
+            this.lblSummaryHarga = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.warning)).BeginInit();
@@ -60,6 +63,7 @@
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // label6
@@ -234,25 +238,13 @@
             this.warning.ContainerControl = this;
             this.warning.Icon = ((System.Drawing.Icon)(resources.GetObject("warning.Icon")));
             // 
-            // beli
-            // 
-            this.beli.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.beli.Font = new System.Drawing.Font("Impact", 12F);
-            this.beli.ForeColor = System.Drawing.Color.Transparent;
-            this.beli.Location = new System.Drawing.Point(294, 406);
-            this.beli.Name = "beli";
-            this.beli.Size = new System.Drawing.Size(220, 32);
-            this.beli.TabIndex = 53;
-            this.beli.Text = "Beli";
-            this.beli.UseVisualStyleBackColor = false;
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(40)))));
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Location = new System.Drawing.Point(43, 179);
+            this.panel4.Location = new System.Drawing.Point(41, 153);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(195, 71);
             this.panel4.TabIndex = 54;
@@ -264,7 +256,7 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label11);
-            this.panel2.Location = new System.Drawing.Point(457, 311);
+            this.panel2.Location = new System.Drawing.Point(455, 285);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(195, 71);
             this.panel2.TabIndex = 55;
@@ -276,7 +268,7 @@
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.label9);
-            this.panel3.Location = new System.Drawing.Point(567, 179);
+            this.panel3.Location = new System.Drawing.Point(565, 153);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(195, 71);
             this.panel3.TabIndex = 56;
@@ -288,7 +280,7 @@
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.label6);
             this.panel5.Controls.Add(this.label7);
-            this.panel5.Location = new System.Drawing.Point(306, 179);
+            this.panel5.Location = new System.Drawing.Point(304, 153);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(195, 71);
             this.panel5.TabIndex = 55;
@@ -300,11 +292,56 @@
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.label12);
             this.panel6.Controls.Add(this.label13);
-            this.panel6.Location = new System.Drawing.Point(177, 311);
+            this.panel6.Location = new System.Drawing.Point(175, 285);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(195, 71);
             this.panel6.TabIndex = 57;
             this.panel6.Click += new System.EventHandler(this.panel6_Click);
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(40)))));
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.lblSummaryPlayer);
+            this.panel7.Controls.Add(this.lblSummaryItem);
+            this.panel7.Controls.Add(this.lblSummaryHarga);
+            this.panel7.Location = new System.Drawing.Point(0, 369);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(800, 81);
+            this.panel7.TabIndex = 60;
+            // 
+            // lblSummaryPlayer
+            // 
+            this.lblSummaryPlayer.AutoSize = true;
+            this.lblSummaryPlayer.Font = new System.Drawing.Font("Impact", 10F);
+            this.lblSummaryPlayer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblSummaryPlayer.Location = new System.Drawing.Point(93, 15);
+            this.lblSummaryPlayer.Name = "lblSummaryPlayer";
+            this.lblSummaryPlayer.Size = new System.Drawing.Size(42, 18);
+            this.lblSummaryPlayer.TabIndex = 24;
+            this.lblSummaryPlayer.Text = "Email:";
+            // 
+            // lblSummaryItem
+            // 
+            this.lblSummaryItem.AutoSize = true;
+            this.lblSummaryItem.Font = new System.Drawing.Font("Impact", 10F);
+            this.lblSummaryItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblSummaryItem.Location = new System.Drawing.Point(386, 15);
+            this.lblSummaryItem.Name = "lblSummaryItem";
+            this.lblSummaryItem.Size = new System.Drawing.Size(36, 18);
+            this.lblSummaryItem.TabIndex = 23;
+            this.lblSummaryItem.Text = "Item:";
+            // 
+            // lblSummaryHarga
+            // 
+            this.lblSummaryHarga.AutoSize = true;
+            this.lblSummaryHarga.Font = new System.Drawing.Font("Impact", 10F);
+            this.lblSummaryHarga.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblSummaryHarga.Location = new System.Drawing.Point(634, 15);
+            this.lblSummaryHarga.Name = "lblSummaryHarga";
+            this.lblSummaryHarga.Size = new System.Drawing.Size(45, 18);
+            this.lblSummaryHarga.TabIndex = 22;
+            this.lblSummaryHarga.Text = "Harga:";
             // 
             // Roblox
             // 
@@ -312,12 +349,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.beli);
             this.Controls.Add(this.panel1);
             this.Name = "Roblox";
             this.Text = "Roblox";
@@ -336,6 +373,8 @@
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -358,11 +397,14 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ErrorProvider warning;
-        private System.Windows.Forms.Button beli;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label lblSummaryPlayer;
+        private System.Windows.Forms.Label lblSummaryItem;
+        private System.Windows.Forms.Label lblSummaryHarga;
     }
 }

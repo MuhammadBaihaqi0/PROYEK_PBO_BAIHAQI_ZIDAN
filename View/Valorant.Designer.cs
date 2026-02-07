@@ -44,14 +44,17 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.warning = new System.Windows.Forms.ErrorProvider(this.components);
-            this.beli = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.lblSummaryPlayer = new System.Windows.Forms.Label();
+            this.lblSummaryItem = new System.Windows.Forms.Label();
+            this.lblSummaryHarga = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.warning)).BeginInit();
@@ -60,6 +63,7 @@
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // label12
@@ -213,18 +217,6 @@
             this.warning.ContainerControl = this;
             this.warning.Icon = ((System.Drawing.Icon)(resources.GetObject("warning.Icon")));
             // 
-            // beli
-            // 
-            this.beli.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.beli.Font = new System.Drawing.Font("Impact", 12F);
-            this.beli.ForeColor = System.Drawing.Color.Transparent;
-            this.beli.Location = new System.Drawing.Point(295, 406);
-            this.beli.Name = "beli";
-            this.beli.Size = new System.Drawing.Size(220, 32);
-            this.beli.TabIndex = 47;
-            this.beli.Text = "Beli";
-            this.beli.UseVisualStyleBackColor = false;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(40)))));
@@ -249,6 +241,17 @@
             this.panel3.TabIndex = 49;
             this.panel3.Click += new System.EventHandler(this.panel3_Click);
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Transparent;
+            this.label14.Location = new System.Drawing.Point(52, 18);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(105, 13);
+            this.label14.TabIndex = 20;
+            this.label14.Text = "Riot Cash 75,000";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -260,17 +263,6 @@
             this.label2.TabIndex = 21;
             this.label2.Text = "Rp 75.000";
             this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Transparent;
-            this.label14.Location = new System.Drawing.Point(52, 18);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(105, 13);
-            this.label14.TabIndex = 20;
-            this.label14.Text = "Riot Cash 75,000";
             // 
             // panel4
             // 
@@ -308,21 +300,67 @@
             this.panel6.TabIndex = 52;
             this.panel6.Click += new System.EventHandler(this.panel6_Click);
             // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(40)))));
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.lblSummaryPlayer);
+            this.panel7.Controls.Add(this.lblSummaryItem);
+            this.panel7.Controls.Add(this.lblSummaryHarga);
+            this.panel7.Location = new System.Drawing.Point(0, 380);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(800, 74);
+            this.panel7.TabIndex = 60;
+            // 
+            // lblSummaryPlayer
+            // 
+            this.lblSummaryPlayer.AutoSize = true;
+            this.lblSummaryPlayer.Font = new System.Drawing.Font("Impact", 10F);
+            this.lblSummaryPlayer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblSummaryPlayer.Location = new System.Drawing.Point(93, 15);
+            this.lblSummaryPlayer.Name = "lblSummaryPlayer";
+            this.lblSummaryPlayer.Size = new System.Drawing.Size(42, 18);
+            this.lblSummaryPlayer.TabIndex = 24;
+            this.lblSummaryPlayer.Text = "Email:";
+            // 
+            // lblSummaryItem
+            // 
+            this.lblSummaryItem.AutoSize = true;
+            this.lblSummaryItem.Font = new System.Drawing.Font("Impact", 10F);
+            this.lblSummaryItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblSummaryItem.Location = new System.Drawing.Point(386, 15);
+            this.lblSummaryItem.Name = "lblSummaryItem";
+            this.lblSummaryItem.Size = new System.Drawing.Size(36, 18);
+            this.lblSummaryItem.TabIndex = 23;
+            this.lblSummaryItem.Text = "Item:";
+            // 
+            // lblSummaryHarga
+            // 
+            this.lblSummaryHarga.AutoSize = true;
+            this.lblSummaryHarga.Font = new System.Drawing.Font("Impact", 10F);
+            this.lblSummaryHarga.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblSummaryHarga.Location = new System.Drawing.Point(634, 15);
+            this.lblSummaryHarga.Name = "lblSummaryHarga";
+            this.lblSummaryHarga.Size = new System.Drawing.Size(45, 18);
+            this.lblSummaryHarga.TabIndex = 22;
+            this.lblSummaryHarga.Text = "Harga:";
+            // 
             // Valorant
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.beli);
             this.Controls.Add(this.panel1);
             this.Name = "Valorant";
             this.Text = "Valorant";
+            this.Load += new System.EventHandler(this.Valorant_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
@@ -337,6 +375,8 @@
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -357,7 +397,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ErrorProvider warning;
-        private System.Windows.Forms.Button beli;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
@@ -365,5 +404,9 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label lblSummaryPlayer;
+        private System.Windows.Forms.Label lblSummaryItem;
+        private System.Windows.Forms.Label lblSummaryHarga;
     }
 }

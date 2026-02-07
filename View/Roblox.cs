@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Proyek_besar_pbo_baihaqi_zidan.View
 {
@@ -17,7 +18,7 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
             InitializeComponent();
         }
 
-        private void SetErrorMessage(TextBox textBox, string message)
+        private void SetErrorMessage(System.Windows.Forms.TextBox textBox, string message)
         {
             warning.SetError(textBox, message);
         }
@@ -39,49 +40,92 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
 
         }
 
+        private bool ValidasiPlayer()
+        {
+            if (string.IsNullOrWhiteSpace(textBox2.Text))
+            {
+                MessageBox.Show(
+                    "Silakan masukkan Email terlebih dahulu.",
+                    "Peringatan",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return false;
+            }
+            return true;
+        }
+
         private void panel4_Click(object sender, EventArgs e)
         {
+            if (!ValidasiPlayer()) return;
+
             MessageBox.Show("" +
                 "Jumlah Gift : 45,000\nHarga : Rp 45.000",
                 "Informasi",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
+
+            UpdateSummary("Gift 45,000", 45000);
         }
 
         private void panel5_Click(object sender, EventArgs e)
         {
+            if (!ValidasiPlayer()) return;
+
             MessageBox.Show("" +
                 "Jumlah Gift : 75,000\nHarga : Rp 75.000",
                 "Informasi",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
+
+            UpdateSummary("Gift 75,000", 75000);
         }
 
         private void panel3_Click(object sender, EventArgs e)
         {
+            if (!ValidasiPlayer()) return;
+
             MessageBox.Show("" +
                 "Jumlah Gift : 149,000\nHarga : Rp 149.000",
                 "Informasi",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
+
+            UpdateSummary("Gift 149,000", 149000);
         }
 
         private void panel6_Click(object sender, EventArgs e)
         {
+            if (!ValidasiPlayer()) return;
+
             MessageBox.Show("" +
                 "Jumlah Gift : 300,000\nHarga : Rp 300.000",
                 "Informasi",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
+
+            UpdateSummary("Gift 300,000", 300000);
         }
 
         private void panel2_Click(object sender, EventArgs e)
         {
+            if (!ValidasiPlayer()) return;
+
             MessageBox.Show("" +
                 "Jumlah Gift : 600,000\nHarga : Rp 600.000",
                 "Informasi",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
+
+            UpdateSummary("Gift 600,000", 600000);
         }
+
+        private void UpdateSummary(string item, int harga)
+        {
+            lblSummaryPlayer.Text = "Email : " + textBox2.Text;
+            lblSummaryItem.Text = "Item : " + item;
+            lblSummaryHarga.Text = "Harga : Rp " + harga.ToString("N0");
+        }
+
     }
 }

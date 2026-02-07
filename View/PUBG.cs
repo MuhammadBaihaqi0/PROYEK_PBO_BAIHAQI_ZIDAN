@@ -51,49 +51,97 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
 
         }
 
+        private bool ValidasiPlayer()
+        {
+            if (string.IsNullOrWhiteSpace(textBox2.Text))
+            {
+                MessageBox.Show(
+                    "Silakan masukkan ID Player terlebih dahulu.",
+                    "Peringatan",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return false;
+            }
+            return true;
+        }
+
+
         private void panel4_Click(object sender, EventArgs e)
         {
+            if (!ValidasiPlayer()) return;
             MessageBox.Show("" +
                 "Jumlah UC : 10\nHarga : Rp 5.000",
                 "Informasi",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
+
+            UpdateSummary("10 UC", 5000);
         }
 
         private void panel2_Click(object sender, EventArgs e)
         {
+            if (!ValidasiPlayer()) return;
+
             MessageBox.Show("" +
                 "Jumlah UC : 50\nHarga : Rp 50.000",
                 "Informasi",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
+
+            UpdateSummary("50 UC", 50000);
         }
 
         private void panel5_Click(object sender, EventArgs e)
         {
+            if (!ValidasiPlayer()) return;
+
             MessageBox.Show("" +
                 "Jumlah UC : 100\nHarga : Rp 100.000",
                 "Informasi",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
+
+            UpdateSummary("100 UC", 100000);
         }
 
         private void panel6_Click(object sender, EventArgs e)
         {
+            if (!ValidasiPlayer()) return;
+
             MessageBox.Show("" +
                 "Jumlah UC : 200\nHarga : Rp 200.000",
                 "Informasi",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
+
+            UpdateSummary("200 UC", 200000);
         }
 
         private void panel3_Click(object sender, EventArgs e)
         {
+            if (!ValidasiPlayer()) return;
+
             MessageBox.Show("" +
                 "Jumlah UC : 1000\nHarga : Rp 1000.000",
                 "Informasi",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
+
+            UpdateSummary("1000 UC", 1000000);
         }
+
+        private void PUBG_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UpdateSummary(string item, int harga)
+        {
+            lblSummaryPlayer.Text = "ID Player : " + textBox2.Text;
+            lblSummaryItem.Text = "Item : " + item;
+            lblSummaryHarga.Text = "Harga : Rp " + harga.ToString("N0");
+        }
+
     }
 }

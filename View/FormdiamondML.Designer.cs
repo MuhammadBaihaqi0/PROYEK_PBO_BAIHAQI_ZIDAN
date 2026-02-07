@@ -49,7 +49,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.warning = new System.Windows.Forms.ErrorProvider(this.components);
-            this.beli = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -59,6 +58,11 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.lblSummaryPlayer = new System.Windows.Forms.Label();
+            this.lblSummaryItem = new System.Windows.Forms.Label();
+            this.lblSummaryHarga = new System.Windows.Forms.Label();
+            this.lblSummaryServer = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -72,6 +76,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -281,18 +286,6 @@
             this.warning.ContainerControl = this;
             this.warning.Icon = ((System.Drawing.Icon)(resources.GetObject("warning.Icon")));
             // 
-            // beli
-            // 
-            this.beli.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.beli.Font = new System.Drawing.Font("Impact", 12F);
-            this.beli.ForeColor = System.Drawing.Color.Transparent;
-            this.beli.Location = new System.Drawing.Point(301, 366);
-            this.beli.Name = "beli";
-            this.beli.Size = new System.Drawing.Size(220, 32);
-            this.beli.TabIndex = 23;
-            this.beli.Text = "Beli";
-            this.beli.UseVisualStyleBackColor = false;
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(40)))));
@@ -300,7 +293,7 @@
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.pictureBox1);
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Location = new System.Drawing.Point(40, 129);
+            this.panel4.Location = new System.Drawing.Point(36, 116);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(195, 71);
             this.panel4.TabIndex = 51;
@@ -313,7 +306,7 @@
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.pictureBox6);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Location = new System.Drawing.Point(301, 129);
+            this.panel2.Location = new System.Drawing.Point(297, 116);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(195, 71);
             this.panel2.TabIndex = 52;
@@ -337,7 +330,7 @@
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Controls.Add(this.label9);
-            this.panel3.Location = new System.Drawing.Point(565, 129);
+            this.panel3.Location = new System.Drawing.Point(561, 116);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(195, 71);
             this.panel3.TabIndex = 53;
@@ -361,7 +354,7 @@
             this.panel5.Controls.Add(this.label10);
             this.panel5.Controls.Add(this.pictureBox3);
             this.panel5.Controls.Add(this.label11);
-            this.panel5.Location = new System.Drawing.Point(443, 259);
+            this.panel5.Location = new System.Drawing.Point(439, 246);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(195, 71);
             this.panel5.TabIndex = 54;
@@ -385,7 +378,7 @@
             this.panel6.Controls.Add(this.label12);
             this.panel6.Controls.Add(this.pictureBox8);
             this.panel6.Controls.Add(this.label13);
-            this.panel6.Location = new System.Drawing.Point(175, 259);
+            this.panel6.Location = new System.Drawing.Point(171, 246);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(195, 71);
             this.panel6.TabIndex = 52;
@@ -402,21 +395,80 @@
             this.pictureBox8.TabIndex = 18;
             this.pictureBox8.TabStop = false;
             // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(40)))));
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.lblSummaryServer);
+            this.panel7.Controls.Add(this.lblSummaryPlayer);
+            this.panel7.Controls.Add(this.lblSummaryItem);
+            this.panel7.Controls.Add(this.lblSummaryHarga);
+            this.panel7.Location = new System.Drawing.Point(0, 336);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(800, 74);
+            this.panel7.TabIndex = 60;
+            // 
+            // lblSummaryPlayer
+            // 
+            this.lblSummaryPlayer.AutoSize = true;
+            this.lblSummaryPlayer.Font = new System.Drawing.Font("Impact", 10F);
+            this.lblSummaryPlayer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblSummaryPlayer.Location = new System.Drawing.Point(93, 15);
+            this.lblSummaryPlayer.Name = "lblSummaryPlayer";
+            this.lblSummaryPlayer.Size = new System.Drawing.Size(60, 18);
+            this.lblSummaryPlayer.TabIndex = 24;
+            this.lblSummaryPlayer.Text = "Id Player:";
+            // 
+            // lblSummaryItem
+            // 
+            this.lblSummaryItem.AutoSize = true;
+            this.lblSummaryItem.Font = new System.Drawing.Font("Impact", 10F);
+            this.lblSummaryItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblSummaryItem.Location = new System.Drawing.Point(386, 15);
+            this.lblSummaryItem.Name = "lblSummaryItem";
+            this.lblSummaryItem.Size = new System.Drawing.Size(36, 18);
+            this.lblSummaryItem.TabIndex = 23;
+            this.lblSummaryItem.Text = "Item:";
+            // 
+            // lblSummaryHarga
+            // 
+            this.lblSummaryHarga.AutoSize = true;
+            this.lblSummaryHarga.Font = new System.Drawing.Font("Impact", 10F);
+            this.lblSummaryHarga.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblSummaryHarga.Location = new System.Drawing.Point(634, 15);
+            this.lblSummaryHarga.Name = "lblSummaryHarga";
+            this.lblSummaryHarga.Size = new System.Drawing.Size(45, 18);
+            this.lblSummaryHarga.TabIndex = 22;
+            this.lblSummaryHarga.Text = "Harga:";
+            // 
+            // lblSummaryServer
+            // 
+            this.lblSummaryServer.AutoSize = true;
+            this.lblSummaryServer.Font = new System.Drawing.Font("Impact", 10F);
+            this.lblSummaryServer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblSummaryServer.Location = new System.Drawing.Point(91, 46);
+            this.lblSummaryServer.Name = "lblSummaryServer";
+            this.lblSummaryServer.Size = new System.Drawing.Size(62, 18);
+            this.lblSummaryServer.TabIndex = 25;
+            this.lblSummaryServer.Text = "Server Id:";
+            this.lblSummaryServer.Click += new System.EventHandler(this.label1_Click);
+            // 
             // FormdiamondML
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
             this.ClientSize = new System.Drawing.Size(800, 410);
+            this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.beli);
             this.Controls.Add(this.panel1);
             this.Name = "FormdiamondML";
-            this.Text = "a";
+            this.Text = "Mobile Legends";
+            this.Load += new System.EventHandler(this.FormdiamondML_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -436,6 +488,8 @@
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -461,7 +515,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.ErrorProvider warning;
-        private System.Windows.Forms.Button beli;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.PictureBox pictureBox8;
@@ -471,5 +524,10 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label lblSummaryServer;
+        private System.Windows.Forms.Label lblSummaryPlayer;
+        private System.Windows.Forms.Label lblSummaryItem;
+        private System.Windows.Forms.Label lblSummaryHarga;
     }
 }

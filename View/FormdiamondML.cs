@@ -51,49 +51,108 @@ namespace Proyek_besar_pbo_baihaqi_zidan
 
         }
 
+        private bool ValidasiPlayer()
+        {
+            if (string.IsNullOrWhiteSpace(textBox3.Text) ||
+                string.IsNullOrWhiteSpace(textBox4.Text))
+            {
+                MessageBox.Show(
+                    "Silakan masukkan ID Player dan Server ID terlebih dahulu.",
+                    "Peringatan",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return false;
+            }
+            return true;
+        }
+
         private void panel4_Click(object sender, EventArgs e)
         {
+            if (!ValidasiPlayer())
+                return;
+
             MessageBox.Show("" +
                 "Jumlah Diamond : 10\nHarga : Rp 3.000",
                 "Informasi",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
+
+            UpdateSummary("10 Diamonds", 3000);
         }
 
         private void panel2_Click(object sender, EventArgs e)
         {
+            if (!ValidasiPlayer())
+                return;
+
             MessageBox.Show("" +
                "Jumlah Diamond : 50\nHarga : Rp 15.000",
                "Informasi",
                MessageBoxButtons.OK,
                MessageBoxIcon.Information);
+
+            UpdateSummary("50 Diamonds", 15000);
         }
 
         private void panel3_Click(object sender, EventArgs e)
         {
+            if (!ValidasiPlayer())
+                return;
+
             MessageBox.Show("" +
                "Jumlah Diamond : 100\nHarga : Rp 30.000",
                "Informasi",
                MessageBoxButtons.OK,
                MessageBoxIcon.Information);
+
+            UpdateSummary("100 Diamonds", 30000);
         }
 
         private void panel6_Click(object sender, EventArgs e)
         {
+            if (!ValidasiPlayer())
+                return;
+
             MessageBox.Show("" +
                "Jumlah Diamond : 200\nHarga : Rp 60.000",
                "Informasi",
                MessageBoxButtons.OK,
                MessageBoxIcon.Information);
+
+            UpdateSummary("200 Diamonds", 60000);
         }
 
         private void panel5_Click(object sender, EventArgs e)
         {
+            if (!ValidasiPlayer())
+                return;
+
             MessageBox.Show("" +
                "Jumlah Diamond : 1000\nHarga : Rp 300.000",
                "Informasi",
                MessageBoxButtons.OK,
                MessageBoxIcon.Information);
+
+            UpdateSummary("1000 Diamonds", 300000);
+        }
+
+        private void FormdiamondML_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UpdateSummary(string item, int harga)
+        {
+            lblSummaryPlayer.Text = "ID Player : " + textBox3.Text;
+            lblSummaryServer.Text = "Server ID : " + textBox4.Text;
+            lblSummaryItem.Text = "Item : " + item;
+            lblSummaryHarga.Text = "Harga : Rp " + harga.ToString("N0");
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
