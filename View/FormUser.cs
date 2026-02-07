@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 using Proyek_besar_pbo_baihaqi_zidan.Controller;
 
 namespace Proyek_besar_pbo_baihaqi_zidan.View
@@ -17,14 +18,11 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
         string id_user;
         string roleUser;
 
-        public FormUser()
+        // constructor dengan role
+        public FormUser(string role)
         {
             InitializeComponent();
-            roleUser = roleUser;
-
-            this.TopLevel = false;
-            this.FormBorderStyle = FormBorderStyle.None;
-            this.Dock = DockStyle.Fill;
+            roleUser = role;
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)
@@ -34,20 +32,24 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
 
         private void FormUser_Load(object sender, EventArgs e)
         {
+            Tampil();
+
             cbRole.Items.Clear();
             cbRole.Items.Add("Admin");
             cbRole.Items.Add("User");
-
-            TampilData();
         }
 
-        void TampilData()
+        public void Tampil()
         {
-            DataUser.DataSource =
-                koneksi.ShowData("SELECT * FROM users");
+            DataUser.DataSource = koneksi.ShowData(
+        "SELECT id_user, username, role FROM users");
+
+            DataUser.Columns[0].HeaderText = "ID";
+            DataUser.Columns[1].HeaderText = "Username";
+            DataUser.Columns[2].HeaderText = "Role";
         }
 
-        void ResetForm()
+        public void ResetForm()
         {
             tbUsername.Clear();
             tbPassword.Clear();
@@ -57,39 +59,32 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
 
         private void btnSimpan_Click(object sender, EventArgs e)
         {
-            if (
-               tbUsername.Text == "" ||
-               tbPassword.Text == "" ||
-               cbRole.Text == ""
-           )
+            if (tbUsername.Text == "" || tbPassword.Text == "" || cbRole.SelectedIndex == -1)
             {
-                MessageBox.Show("Semua field wajib diisi");
+                MessageBox.Show("Data tidak boleh kosong");
                 return;
             }
 
-            string query =
-                "INSERT INTO users (username, password, saldo, role) VALUES (" +
-                "'" + tbUsername.Text + "', " +
-                "'" + tbPassword.Text + "', " +
-                "'" + cbRole.Text + "'" +
-                ")";
+            string sql = "INSERT INTO users (username, password, role) VALUES (@u,@p,@r)";
+            koneksi.ExecuteQueryParam(sql,
+                new MySqlParameter("@u", tbUsername.Text),
+                new MySqlParameter("@p", tbPassword.Text),
+                new MySqlParameter("@r", cbRole.Text)
+            );
 
-            koneksi.ShowData(query);
-            MessageBox.Show("Data user berhasil ditambahkan");
-
-            TampilData();
             ResetForm();
+            Tampil();
         }
 
         private void DataUser_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
-                DataGridViewRow row = DataUser.Rows[e.RowIndex];
-                id_user = row.Cells["id_user"].Value.ToString();
-                tbUsername.Text = row.Cells["username"].Value.ToString();
-                tbPassword.Text = row.Cells["password"].Value.ToString();
-                cbRole.Text = row.Cells["role"].Value.ToString();
+                if (e.RowIndex < 0) return;
+
+                id_user = DataUser.Rows[e.RowIndex].Cells[0].Value.ToString();
+                tbUsername.Text = DataUser.Rows[e.RowIndex].Cells[1].Value.ToString();
+                cbRole.Text = DataUser.Rows[e.RowIndex].Cells[2].Value.ToString();
             }
         }
 
@@ -101,48 +96,70 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
                 return;
             }
 
-            string query =
-                "UPDATE users SET " +
-                "username='" + tbUsername.Text + "', " +
-                "password='" + tbPassword.Text + "', " +
-                "role='" + cbRole.Text + "' " +
-                "WHERE id_user=" + id_user;
+            string sql =
+                "UPDATE users SET username=@u, password=@p, role=@r WHERE id_user=@id";
 
-            koneksi.ShowData(query);
-            MessageBox.Show("Data user berhasil diubah");
+            koneksi.ExecuteQueryParam(sql,
+                new MySqlParameter("@u", tbUsername.Text),
+                new MySqlParameter("@p", tbPassword.Text),
+                new MySqlParameter("@r", cbRole.Text),
+                new MySqlParameter("@id", id_user)
+            );
 
-            TampilData();
             ResetForm();
+            Tampil();
         }
 
         private void btnHapus_Click(object sender, EventArgs e)
         {
-            if (id_user == null)
-            {
-                MessageBox.Show("Pilih data terlebih dahulu");
-                return;
-            }
+            if (id_user == null) return;
 
-            if (MessageBox.Show(
-                "Yakin ingin menghapus data ini?",
+            DialogResult d = MessageBox.Show(
+                "Yakin hapus user ini?",
                 "Konfirmasi",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                koneksi.ShowData(
-                    "DELETE FROM users WHERE id_user=" + id_user
-                );
+                MessageBoxButtons.YesNo
+            );
 
-                MessageBox.Show("Data user berhasil dihapus");
-                TampilData();
+            if (d == DialogResult.Yes)
+            {
+                koneksi.ExecuteQueryParam(
+                    "DELETE FROM users WHERE id_user=@id",
+                    new MySqlParameter("@id", id_user)
+);
                 ResetForm();
+                Tampil();
             }
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            TampilData();
+            Tampil();
             ResetForm();
+        }
+
+        private void textBoxCariData_TextChanged(object sender, EventArgs e)
+        {
+            string keyword = textBoxCariData.Text.Trim();
+
+            if (keyword == "")
+            {
+                Tampil();
+                return;
+            }
+
+            string sql =
+                "SELECT id_user, username, role FROM users " +
+                "WHERE username LIKE @param OR role LIKE @param";
+
+            DataUser.DataSource = koneksi.ShowDataParam(
+                sql,
+                new MySqlParameter("@param", "%" + keyword + "%")
+);
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+      
         }
     }
 }

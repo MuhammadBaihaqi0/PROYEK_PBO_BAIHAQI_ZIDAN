@@ -96,6 +96,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\Koneksi.cs" />
+    <Compile Include="lib\Excel.cs" />
     <Compile Include="View\FormdiamondFreeFire.cs">
       <SubType>Form</SubType>
     </Compile>

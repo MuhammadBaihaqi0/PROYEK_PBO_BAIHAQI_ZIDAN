@@ -24,6 +24,24 @@ namespace Proyek_besar_pbo_baihaqi_zidan.Controller
             koneksi = new MySqlConnection(connectionString);
         }
 
+        public DataTable ShowDataParam(string query, params MySqlParameter[] parameters)
+        {
+            DataTable dt = new DataTable();
+            koneksi.Open();
+            MySqlCommand cmd = new MySqlCommand(query, koneksi);
+
+            foreach (MySqlParameter p in parameters)
+            {
+                cmd.Parameters.Add(p);
+            }
+
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+            da.Fill(dt);
+            koneksi.Close();
+            return dt;
+        }
+
+
         public DataTable ShowData(string query)
         {
             MySqlDataAdapter adapter =
@@ -45,14 +63,42 @@ namespace Proyek_besar_pbo_baihaqi_zidan.Controller
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message); // biar kelihatan error SQL
+                MessageBox.Show(ex.Message);
                 return false;
             }
             finally
             {
-                koneksi.Close(); // untuk ditutup
+                koneksi.Close();
             }
         }
+
+
+        public bool ExecuteQueryParam(string query, params MySqlParameter[] parameters)
+        {
+            try
+            {
+                koneksi.Open();
+                MySqlCommand cmd = new MySqlCommand(query, koneksi);
+
+                foreach (MySqlParameter param in parameters)
+                {
+                    cmd.Parameters.Add(param);
+                }
+
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+            finally
+            {
+                koneksi.Close();
+            }
+        }
+
 
     }
 }

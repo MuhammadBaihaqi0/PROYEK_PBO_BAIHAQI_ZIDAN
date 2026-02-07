@@ -78,6 +78,7 @@
             this.btnExport.TabIndex = 3;
             this.btnExport.Text = "Export Excel";
             this.btnExport.UseVisualStyleBackColor = false;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // textBoxCariData
             // 
@@ -85,6 +86,7 @@
             this.textBoxCariData.Name = "textBoxCariData";
             this.textBoxCariData.Size = new System.Drawing.Size(267, 21);
             this.textBoxCariData.TabIndex = 1;
+            this.textBoxCariData.TextChanged += new System.EventHandler(this.textBoxCariData_TextChanged);
             // 
             // label7
             // 
