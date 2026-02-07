@@ -12,12 +12,16 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
 {
     public partial class FormTopUpGame : Form
     {
+        public FormTopUpGame()
+        {
+            InitializeComponent();
+        }
+
 
         public FormTopUpGame(string v)
         {
             InitializeComponent();
 
-            // SET SEBAGAI CHILD MDI
             this.TopLevel = false;
             this.FormBorderStyle = FormBorderStyle.None;
             this.Dock = DockStyle.Fill;
@@ -119,6 +123,11 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
         {
             Roblox roblox = new Roblox();
             roblox.Show();
+        }
+
+        private void FormTopUpGame_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Proyek_besar_pbo_baihaqi_zidan.View;
 using Proyek_besar_pbo_baihaqi_zidan.Controller;
 
 namespace Proyek_besar_pbo_baihaqi_zidan.View
@@ -58,11 +59,23 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
                     MessageBoxIcon.Information
                 );
 
-                // buka parent form
-                string role = dt.Rows[0]["role"].ToString();
-                ParentForm parent = new ParentForm(role);
-                parent.Show();
-                this.Hide();
+                // ambil id_user
+                int id_user = Convert.ToInt32(dt.Rows[0]["id_user"]);
+
+                // ADMIN → ParentForm
+                if (id_user == 1)
+                {
+                    string role = dt.Rows[0]["role"].ToString();
+                    ParentForm parent = new ParentForm(role);
+                    parent.Show();
+                    this.Hide();
+                }
+                // USER BIASA → LANGSUNG TOP UP
+                else
+                {
+                    FormTopUpGame topup = new FormTopUpGame();
+                    topup.Show();
+                }
             }
             else
             {
