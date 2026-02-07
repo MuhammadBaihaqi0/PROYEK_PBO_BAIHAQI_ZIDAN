@@ -7,23 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Proyek_besar_pbo_baihaqi_zidan.Controller;
 
 namespace Proyek_besar_pbo_baihaqi_zidan.View
 {
-    public partial class Form1 : Form
+    public partial class PB : Form
     {
-        Koneksi koneksi = new Koneksi();
-
-        public Form1()
+        public PB()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            dgvUsers.DataSource =
-        koneksi.ShowData("SELECT * FROM users");
         }
     }
 }

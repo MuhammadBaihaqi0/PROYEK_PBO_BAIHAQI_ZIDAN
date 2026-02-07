@@ -95,5 +95,7 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
         {
             tbPassword.UseSystemPasswordChar = !Cekpass.Checked;
         }
+
+        
     }
 }

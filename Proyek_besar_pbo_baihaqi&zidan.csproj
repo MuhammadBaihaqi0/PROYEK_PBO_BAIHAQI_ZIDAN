@@ -96,25 +96,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\Koneksi.cs" />
+    <Compile Include="View\FormdiamondFreeFire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormdiamondFreeFire.Designer.cs">
+      <DependentUpon>FormdiamondFreeFire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormdiamondML.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormdiamondML.Designer.cs">
+      <DependentUpon>FormdiamondML.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="View\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\FormItem.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\FormItem.Designer.cs">
-      <DependentUpon>FormItem.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\FormRegister.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,22 +145,34 @@
     <Compile Include="View\ParentForm.Designer.cs">
       <DependentUpon>ParentForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\PB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PB.Designer.cs">
+      <DependentUpon>PB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PUBG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PUBG.Designer.cs">
+      <DependentUpon>PUBG.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\StartUp.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\StartUp.Designer.cs">
       <DependentUpon>StartUp.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\FormdiamondFreeFire.resx">
+      <DependentUpon>FormdiamondFreeFire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormdiamondML.resx">
+      <DependentUpon>FormdiamondML.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\FormItem.resx">
-      <DependentUpon>FormItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormRegister.resx">
       <DependentUpon>FormRegister.cs</DependentUpon>
@@ -176,6 +188,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ParentForm.resx">
       <DependentUpon>ParentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PB.resx">
+      <DependentUpon>PB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PUBG.resx">
+      <DependentUpon>PUBG.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\StartUp.resx">
       <DependentUpon>StartUp.cs</DependentUpon>
@@ -229,6 +247,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Iklan\2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Weekly_Diamond_Pass_Mobile_Legend_Black_Screen-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ff dm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UC-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pb.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
