@@ -57,9 +57,10 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.lblSummaryHarga = new System.Windows.Forms.Label();
-            this.lblSummaryItem = new System.Windows.Forms.Label();
             this.lblSummaryPlayer = new System.Windows.Forms.Label();
+            this.lblSummaryItem = new System.Windows.Forms.Label();
+            this.lblSummaryHarga = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -373,6 +374,7 @@
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(40)))));
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.button1);
             this.panel7.Controls.Add(this.lblSummaryPlayer);
             this.panel7.Controls.Add(this.lblSummaryItem);
             this.panel7.Controls.Add(this.lblSummaryHarga);
@@ -381,38 +383,51 @@
             this.panel7.Size = new System.Drawing.Size(800, 74);
             this.panel7.TabIndex = 59;
             // 
-            // lblSummaryHarga
+            // lblSummaryPlayer
             // 
-            this.lblSummaryHarga.AutoSize = true;
-            this.lblSummaryHarga.Font = new System.Drawing.Font("Impact", 10F);
-            this.lblSummaryHarga.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblSummaryHarga.Location = new System.Drawing.Point(634, 15);
-            this.lblSummaryHarga.Name = "lblSummaryHarga";
-            this.lblSummaryHarga.Size = new System.Drawing.Size(45, 18);
-            this.lblSummaryHarga.TabIndex = 22;
-            this.lblSummaryHarga.Text = "Harga:";
+            this.lblSummaryPlayer.AutoSize = true;
+            this.lblSummaryPlayer.Font = new System.Drawing.Font("Impact", 10F);
+            this.lblSummaryPlayer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblSummaryPlayer.Location = new System.Drawing.Point(56, 15);
+            this.lblSummaryPlayer.Name = "lblSummaryPlayer";
+            this.lblSummaryPlayer.Size = new System.Drawing.Size(60, 18);
+            this.lblSummaryPlayer.TabIndex = 24;
+            this.lblSummaryPlayer.Text = "Id Player:";
             // 
             // lblSummaryItem
             // 
             this.lblSummaryItem.AutoSize = true;
             this.lblSummaryItem.Font = new System.Drawing.Font("Impact", 10F);
             this.lblSummaryItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblSummaryItem.Location = new System.Drawing.Point(386, 15);
+            this.lblSummaryItem.Location = new System.Drawing.Point(250, 15);
             this.lblSummaryItem.Name = "lblSummaryItem";
             this.lblSummaryItem.Size = new System.Drawing.Size(36, 18);
             this.lblSummaryItem.TabIndex = 23;
             this.lblSummaryItem.Text = "Item:";
             // 
-            // lblSummaryPlayer
+            // lblSummaryHarga
             // 
-            this.lblSummaryPlayer.AutoSize = true;
-            this.lblSummaryPlayer.Font = new System.Drawing.Font("Impact", 10F);
-            this.lblSummaryPlayer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblSummaryPlayer.Location = new System.Drawing.Point(93, 15);
-            this.lblSummaryPlayer.Name = "lblSummaryPlayer";
-            this.lblSummaryPlayer.Size = new System.Drawing.Size(60, 18);
-            this.lblSummaryPlayer.TabIndex = 24;
-            this.lblSummaryPlayer.Text = "Id Player:";
+            this.lblSummaryHarga.AutoSize = true;
+            this.lblSummaryHarga.Font = new System.Drawing.Font("Impact", 10F);
+            this.lblSummaryHarga.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblSummaryHarga.Location = new System.Drawing.Point(427, 15);
+            this.lblSummaryHarga.Name = "lblSummaryHarga";
+            this.lblSummaryHarga.Size = new System.Drawing.Size(45, 18);
+            this.lblSummaryHarga.TabIndex = 22;
+            this.lblSummaryHarga.Text = "Harga:";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.button1.Font = new System.Drawing.Font("Impact", 10F);
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button1.Location = new System.Drawing.Point(690, 34);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(97, 27);
+            this.button1.TabIndex = 26;
+            this.button1.Text = "Beli";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormdiamondFreeFire
             // 
@@ -487,5 +502,6 @@
         private System.Windows.Forms.Label lblSummaryPlayer;
         private System.Windows.Forms.Label lblSummaryItem;
         private System.Windows.Forms.Label lblSummaryHarga;
+        private System.Windows.Forms.Button button1;
     }
 }

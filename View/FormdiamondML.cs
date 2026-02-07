@@ -7,19 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Proyek_besar_pbo_baihaqi_zidan
 {
     public partial class FormdiamondML : Form
     {
+        string selectedItem = "";
+        int selectedHarga = 0;
+
         public FormdiamondML()
         {
             InitializeComponent();
         }
 
-        private void SetErrorMessage(TextBox textBox, string message)
+        private void SetErrorMessage(System.Windows.Forms.TextBox textBox, string message)
         {
-            warning.SetError(textBox, message);
+            warning.SetError(textBox3, message);
+            warning.SetError(textBox4, message);
         }
 
         private void textBox3_Leave(object sender, EventArgs e)
@@ -144,15 +149,63 @@ namespace Proyek_besar_pbo_baihaqi_zidan
 
         private void UpdateSummary(string item, int harga)
         {
+            selectedItem = item;
+            selectedHarga = harga;
+
             lblSummaryPlayer.Text = "ID Player : " + textBox3.Text;
             lblSummaryServer.Text = "Server ID : " + textBox4.Text;
             lblSummaryItem.Text = "Item : " + item;
             lblSummaryHarga.Text = "Harga : Rp " + harga.ToString("N0");
         }
 
+        private void ResetForm()
+        {
+            textBox3.Clear();
+            textBox4.Clear();
+
+            lblSummaryPlayer.Text = "ID Player : ";
+            lblSummaryServer.Text = "Server ID : ";
+            lblSummaryItem.Text = "Item : ";
+            lblSummaryHarga.Text = "Harga : ";
+
+            selectedItem = "";
+            selectedHarga = 0;
+        }
+
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (!ValidasiPlayer())
+                return;
+
+            if (string.IsNullOrEmpty(selectedItem))
+            {
+                MessageBox.Show(
+                    "Silakan pilih item terlebih dahulu.",
+                    "Peringatan",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
+
+            // JIKA SEMUA VALID
+            MessageBox.Show(
+                $"Pembelian berhasil!\n\n" +
+                $"ID Player : {textBox3.Text}\n" +
+                $"Server ID : {textBox4.Text}\n" +
+                $"Item      : {selectedItem}\n" +
+                $"Harga     : Rp {selectedHarga:N0}",
+                "Sukses",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
+            );
+
+            ResetForm();
         }
     }
 }

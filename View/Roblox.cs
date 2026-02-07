@@ -13,6 +13,9 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
 {
     public partial class Roblox : Form
     {
+        string selectedItem = "";
+        int selectedHarga = 0;
+
         public Roblox()
         {
             InitializeComponent();
@@ -122,10 +125,54 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
 
         private void UpdateSummary(string item, int harga)
         {
+            selectedItem = item;
+            selectedHarga = harga;
+
             lblSummaryPlayer.Text = "Email : " + textBox2.Text;
             lblSummaryItem.Text = "Item : " + item;
             lblSummaryHarga.Text = "Harga : Rp " + harga.ToString("N0");
         }
 
+        private void ResetForm()
+        {
+            textBox2.Clear();
+
+            lblSummaryPlayer.Text = "Email : ";
+            lblSummaryItem.Text = "Item : ";
+            lblSummaryHarga.Text = "Harga : ";
+
+            selectedItem = "";
+            selectedHarga = 0;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (!ValidasiPlayer())
+                return;
+
+            if (string.IsNullOrEmpty(selectedItem))
+            {
+                MessageBox.Show(
+                    "Silakan pilih item terlebih dahulu.",
+                    "Peringatan",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
+
+            // JIKA SEMUA VALID
+            MessageBox.Show(
+                $"Pembelian berhasil!\n\n" +
+                $"Email : {textBox2.Text}\n" +
+                $"Item      : {selectedItem}\n" +
+                $"Harga     : Rp {selectedHarga:N0}",
+                "Sukses",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
+            );
+
+            ResetForm();
+        }
     }
 }
