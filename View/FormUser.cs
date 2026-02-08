@@ -9,6 +9,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using Proyek_besar_pbo_baihaqi_zidan.Controller;
+using OfficeOpenXml;
+using OfficeOpenXml.Style;
+using Proyek_besar_pbo_baihaqi_zidan.lib;
+
 
 namespace Proyek_besar_pbo_baihaqi_zidan.View
 {
@@ -159,7 +163,21 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
 
         private void btnExport_Click(object sender, EventArgs e)
         {
-      
+            if (DataUser.Rows.Count == 0)
+            {
+                MessageBox.Show("Tidak ada data untuk diexport");
+                return;
+            }
+
+            SaveFileDialog save = new SaveFileDialog();
+            save.Filter = "Excel File (*.xlsx)|*.xlsx";
+            save.FileName = "Data_User.xlsx";
+
+            if (save.ShowDialog() == DialogResult.OK)
+            {
+                Excel.Export(DataUser, save.FileName);
+                MessageBox.Show("Data berhasil diexport ke Excel");
+            }
         }
     }
 }
