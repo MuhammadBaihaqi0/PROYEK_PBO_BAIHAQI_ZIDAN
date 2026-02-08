@@ -17,8 +17,7 @@ namespace Proyek_besar_pbo_baihaqi_zidan
         [STAThread]
         static void Main()
         {
-          
-
+            ExcelPackage.License.SetNonCommercialPersonal("ULBI");
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

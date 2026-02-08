@@ -46,11 +46,12 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
         public void Tampil()
         {
             DataUser.DataSource = koneksi.ShowData(
-        "SELECT id_user, username, role FROM users");
+        "SELECT id_user, username, password, role FROM users");
 
             DataUser.Columns[0].HeaderText = "ID";
             DataUser.Columns[1].HeaderText = "Username";
-            DataUser.Columns[2].HeaderText = "Role";
+            DataUser.Columns[2].HeaderText = "Password";
+            DataUser.Columns[3].HeaderText = "Role";
         }
 
         public void ResetForm()
@@ -88,7 +89,8 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
 
                 id_user = DataUser.Rows[e.RowIndex].Cells[0].Value.ToString();
                 tbUsername.Text = DataUser.Rows[e.RowIndex].Cells[1].Value.ToString();
-                cbRole.Text = DataUser.Rows[e.RowIndex].Cells[2].Value.ToString();
+                tbPassword.Text = DataUser.Rows[e.RowIndex].Cells[2].Value.ToString();
+                cbRole.Text = DataUser.Rows[e.RowIndex].Cells[3].Value.ToString();
             }
         }
 
@@ -178,6 +180,16 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
                 Excel.Export(DataUser, save.FileName);
                 MessageBox.Show("Data berhasil diexport ke Excel");
             }
+        }
+
+        private void tbPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbUsername_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

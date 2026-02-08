@@ -40,12 +40,12 @@
             this.cbRole = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tbPassword = new System.Windows.Forms.TextBox();
             this.tbUsername = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Table = new System.Windows.Forms.GroupBox();
             this.DataUser = new System.Windows.Forms.DataGridView();
-            this.tbPassword = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -192,12 +192,21 @@
             this.groupBox2.Text = "Form Input Nilai";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
+            // tbPassword
+            // 
+            this.tbPassword.Location = new System.Drawing.Point(102, 105);
+            this.tbPassword.Name = "tbPassword";
+            this.tbPassword.Size = new System.Drawing.Size(233, 21);
+            this.tbPassword.TabIndex = 15;
+            this.tbPassword.TextChanged += new System.EventHandler(this.tbPassword_TextChanged);
+            // 
             // tbUsername
             // 
             this.tbUsername.Location = new System.Drawing.Point(102, 45);
             this.tbUsername.Name = "tbUsername";
             this.tbUsername.Size = new System.Drawing.Size(233, 21);
             this.tbUsername.TabIndex = 6;
+            this.tbUsername.TextChanged += new System.EventHandler(this.tbUsername_TextChanged);
             // 
             // label4
             // 
@@ -240,13 +249,6 @@
             this.DataUser.Size = new System.Drawing.Size(884, 171);
             this.DataUser.TabIndex = 0;
             this.DataUser.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataUser_CellClick);
-            // 
-            // tbPassword
-            // 
-            this.tbPassword.Location = new System.Drawing.Point(102, 105);
-            this.tbPassword.Name = "tbPassword";
-            this.tbPassword.Size = new System.Drawing.Size(233, 21);
-            this.tbPassword.TabIndex = 15;
             // 
             // FormUser
             // 
