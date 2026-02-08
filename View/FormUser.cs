@@ -1,37 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 using Proyek_besar_pbo_baihaqi_zidan.Controller;
-using OfficeOpenXml;
-using OfficeOpenXml.Style;
+using Proyek_besar_pbo_baihaqi_zidan.Model;
 using Proyek_besar_pbo_baihaqi_zidan.lib;
-
 
 namespace Proyek_besar_pbo_baihaqi_zidan.View
 {
     public partial class FormUser : Form
     {
-        Koneksi koneksi = new Koneksi();
-        string id_user;
+        UserController userController = new UserController();
+        int id_user = -1;
         string roleUser;
 
-        // constructor dengan role
         public FormUser(string role)
         {
             InitializeComponent();
             roleUser = role;
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
         }
 
         private void FormUser_Load(object sender, EventArgs e)
@@ -45,8 +30,7 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
 
         public void Tampil()
         {
-            DataUser.DataSource = koneksi.ShowData(
-        "SELECT id_user, username, password, role FROM users");
+            DataUser.DataSource = userController.GetAll();
 
             DataUser.Columns[0].HeaderText = "ID";
             DataUser.Columns[1].HeaderText = "Username";
@@ -59,7 +43,7 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
             tbUsername.Clear();
             tbPassword.Clear();
             cbRole.SelectedIndex = -1;
-            id_user = null;
+            id_user = -1;
         }
 
         private void btnSimpan_Click(object sender, EventArgs e)
@@ -70,55 +54,52 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
                 return;
             }
 
-            string sql = "INSERT INTO users (username, password, role) VALUES (@u,@p,@r)";
-            koneksi.ExecuteQueryParam(sql,
-                new MySqlParameter("@u", tbUsername.Text),
-                new MySqlParameter("@p", tbPassword.Text),
-                new MySqlParameter("@r", cbRole.Text)
-            );
+            UserModel user = new UserModel
+            {
+                Username = tbUsername.Text,
+                Password = tbPassword.Text,
+                Role = cbRole.Text
+            };
 
+            userController.Insert(user);
             ResetForm();
             Tampil();
         }
 
         private void DataUser_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
-            {
-                if (e.RowIndex < 0) return;
+            if (e.RowIndex < 0) return;
 
-                id_user = DataUser.Rows[e.RowIndex].Cells[0].Value.ToString();
-                tbUsername.Text = DataUser.Rows[e.RowIndex].Cells[1].Value.ToString();
-                tbPassword.Text = DataUser.Rows[e.RowIndex].Cells[2].Value.ToString();
-                cbRole.Text = DataUser.Rows[e.RowIndex].Cells[3].Value.ToString();
-            }
+            id_user = Convert.ToInt32(DataUser.Rows[e.RowIndex].Cells[0].Value);
+            tbUsername.Text = DataUser.Rows[e.RowIndex].Cells[1].Value.ToString();
+            tbPassword.Text = DataUser.Rows[e.RowIndex].Cells[2].Value.ToString();
+            cbRole.Text = DataUser.Rows[e.RowIndex].Cells[3].Value.ToString();
         }
 
         private void btnUbah_Click(object sender, EventArgs e)
         {
-            if (id_user == null)
+            if (id_user == -1)
             {
                 MessageBox.Show("Pilih data terlebih dahulu");
                 return;
             }
 
-            string sql =
-                "UPDATE users SET username=@u, password=@p, role=@r WHERE id_user=@id";
+            UserModel user = new UserModel
+            {
+                IdUser = id_user,
+                Username = tbUsername.Text,
+                Password = tbPassword.Text,
+                Role = cbRole.Text
+            };
 
-            koneksi.ExecuteQueryParam(sql,
-                new MySqlParameter("@u", tbUsername.Text),
-                new MySqlParameter("@p", tbPassword.Text),
-                new MySqlParameter("@r", cbRole.Text),
-                new MySqlParameter("@id", id_user)
-            );
-
+            userController.Update(user);
             ResetForm();
             Tampil();
         }
 
         private void btnHapus_Click(object sender, EventArgs e)
         {
-            if (id_user == null) return;
+            if (id_user == -1) return;
 
             DialogResult d = MessageBox.Show(
                 "Yakin hapus user ini?",
@@ -128,10 +109,7 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
 
             if (d == DialogResult.Yes)
             {
-                koneksi.ExecuteQueryParam(
-                    "DELETE FROM users WHERE id_user=@id",
-                    new MySqlParameter("@id", id_user)
-);
+                userController.Delete(id_user);
                 ResetForm();
                 Tampil();
             }
@@ -139,8 +117,8 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            Tampil();
             ResetForm();
+            Tampil();
         }
 
         private void textBoxCariData_TextChanged(object sender, EventArgs e)
@@ -153,15 +131,9 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
                 return;
             }
 
-            string sql =
-                "SELECT id_user, username, role FROM users " +
-                "WHERE username LIKE @param OR role LIKE @param";
-
-            DataUser.DataSource = koneksi.ShowDataParam(
-                sql,
-                new MySqlParameter("@param", "%" + keyword + "%")
-);
+            DataUser.DataSource = userController.Search(keyword);
         }
+
 
         private void btnExport_Click(object sender, EventArgs e)
         {
@@ -171,25 +143,17 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
                 return;
             }
 
-            SaveFileDialog save = new SaveFileDialog();
-            save.Filter = "Excel File (*.xlsx)|*.xlsx";
-            save.FileName = "Data_User.xlsx";
+            SaveFileDialog save = new SaveFileDialog
+            {
+                Filter = "Excel File (*.xlsx)|*.xlsx",
+                FileName = "Data_User.xlsx"
+            };
 
             if (save.ShowDialog() == DialogResult.OK)
             {
                 Excel.Export(DataUser, save.FileName);
                 MessageBox.Show("Data berhasil diexport ke Excel");
             }
-        }
-
-        private void tbPassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbUsername_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

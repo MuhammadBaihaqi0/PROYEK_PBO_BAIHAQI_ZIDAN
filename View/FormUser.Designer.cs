@@ -190,7 +190,6 @@
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Form Input Nilai";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // tbPassword
             // 
@@ -198,7 +197,6 @@
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(233, 21);
             this.tbPassword.TabIndex = 15;
-            this.tbPassword.TextChanged += new System.EventHandler(this.tbPassword_TextChanged);
             // 
             // tbUsername
             // 
@@ -206,7 +204,6 @@
             this.tbUsername.Name = "tbUsername";
             this.tbUsername.Size = new System.Drawing.Size(233, 21);
             this.tbUsername.TabIndex = 6;
-            this.tbUsername.TextChanged += new System.EventHandler(this.tbUsername_TextChanged);
             // 
             // label4
             // 
