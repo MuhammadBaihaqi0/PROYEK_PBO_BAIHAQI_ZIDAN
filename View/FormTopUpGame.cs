@@ -129,5 +129,12 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
         {
 
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Close();
+        }
     }
 }

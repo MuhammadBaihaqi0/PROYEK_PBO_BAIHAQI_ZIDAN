@@ -86,6 +86,7 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
                     MessageBoxIcon.Error
                 );
             }
+            this.Close();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
