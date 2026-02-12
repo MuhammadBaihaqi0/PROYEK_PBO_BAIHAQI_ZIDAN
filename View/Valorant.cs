@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Proyek_besar_pbo_baihaqi_zidan.Controller;
+using Proyek_besar_pbo_baihaqi_zidan.Model;
 
 namespace Proyek_besar_pbo_baihaqi_zidan.View
 {
@@ -172,15 +174,36 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
             }
 
             // JIKA SEMUA VALID
-            MessageBox.Show(
-                $"Pembelian berhasil!\n\n" +
-                $"Email : {textBox2.Text}\n" +
-                $"Item      : {selectedItem}\n" +
-                $"Harga     : Rp {selectedHarga:N0}",
-                "Sukses",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information
-            );
+            // SIMPAN TRANSAKSI KE DATABASE
+            TransaksiController transController = new TransaksiController();
+            TransactionModel transaksi = new TransactionModel
+            {
+                IdUser = Session.CurrentUser.IdUser,
+                IdPlayer = textBox2.Text,
+                ServerId = "-",
+                Item = selectedItem,
+                Harga = selectedHarga,
+                Tanggal = DateTime.Now,
+                Status = "Sukses",
+                Game = "Valorant"
+            };
+
+            if (transController.AddTransaction(transaksi))
+            {
+                MessageBox.Show(
+                    $"Pembelian berhasil!\n\n" +
+                    $"Email : {textBox2.Text}\n" +
+                    $"Item      : {selectedItem}\n" +
+                    $"Harga     : Rp {selectedHarga:N0}",
+                    "Sukses",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                );
+            }
+            else
+            {
+                MessageBox.Show("Gagal menyimpan transaksi.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
             ResetForm();
         }

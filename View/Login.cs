@@ -58,9 +58,21 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information
                 );
-
+                
                 // ambil id_user
                 int id_user = Convert.ToInt32(dt.Rows[0]["id_user"]);
+                string username = dt.Rows[0]["username"].ToString();
+                string password = dt.Rows[0]["password"].ToString();
+                string role = dt.Rows[0]["role"].ToString();
+
+                // 2. SIMPAN KE SESSION
+                Proyek_besar_pbo_baihaqi_zidan.Model.Session.CurrentUser = new Proyek_besar_pbo_baihaqi_zidan.Model.UserModel
+                {
+                    IdUser = id_user,
+                    Username = username,
+                    Password = password,
+                    Role = role
+                };
 
                 // ADMIN → ParentForm
                 if (id_user == 1)

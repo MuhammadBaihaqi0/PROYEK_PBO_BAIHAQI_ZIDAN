@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using Proyek_besar_pbo_baihaqi_zidan.Controller;
+using Proyek_besar_pbo_baihaqi_zidan.Model;
 
 namespace Proyek_besar_pbo_baihaqi_zidan
 {
@@ -194,16 +196,37 @@ namespace Proyek_besar_pbo_baihaqi_zidan
             }
 
             // JIKA SEMUA VALID
-            MessageBox.Show(
-                $"Pembelian berhasil!\n\n" +
-                $"ID Player : {textBox3.Text}\n" +
-                $"Server ID : {textBox4.Text}\n" +
-                $"Item      : {selectedItem}\n" +
-                $"Harga     : Rp {selectedHarga:N0}",
-                "Sukses",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information
-            );
+            // SIMPAN TRANSAKSI KE DATABASE
+            TransaksiController transController = new TransaksiController();
+            TransactionModel transaksi = new TransactionModel
+            {
+                IdUser = Session.CurrentUser.IdUser, // Dari Session
+                IdPlayer = textBox3.Text,
+                ServerId = textBox4.Text,
+                Item = selectedItem,
+                Harga = selectedHarga,
+                Tanggal = DateTime.Now,
+                Status = "Sukses",
+                Game = "Mobile Legends"
+            };
+
+            if (transController.AddTransaction(transaksi))
+            {
+                MessageBox.Show(
+                    $"Pembelian berhasil!\n\n" +
+                    $"ID Player : {textBox3.Text}\n" +
+                    $"Server ID : {textBox4.Text}\n" +
+                    $"Item      : {selectedItem}\n" +
+                    $"Harga     : Rp {selectedHarga:N0}",
+                    "Sukses",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                );
+            }
+            else
+            {
+                MessageBox.Show("Gagal menyimpan transaksi.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
             ResetForm();
         }
