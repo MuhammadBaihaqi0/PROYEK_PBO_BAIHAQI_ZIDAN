@@ -73,6 +73,8 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
             foreach (Form frm in this.MdiChildren)
                 frm.Close();
 
+            FormTopUpGame topup = new FormTopUpGame();
+            topup.MdiParent = this;
             topup.Show();
         }
 

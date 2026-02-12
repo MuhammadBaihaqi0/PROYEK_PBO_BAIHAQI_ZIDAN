@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Proyek_besar_pbo_baihaqi_zidan.Model
 {
-    internal class TransactionModel
+    public class TransactionModel
     {
         public int IdTransaksi { get; set; }
         public int IdUser { get; set; }

@@ -114,8 +114,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\Koneksi.cs" />
+    <Compile Include="Controller\TransaksiController.cs" />
     <Compile Include="Controller\UserController.cs" />
     <Compile Include="lib\Excel.cs" />
+    <Compile Include="Model\Session.cs" />
+    <Compile Include="Model\TransactionModel.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="View\FormdiamondFreeFire.cs">
       <SubType>Form</SubType>
@@ -147,6 +150,12 @@
     </Compile>
     <Compile Include="View\FormTopUpGame.Designer.cs">
       <DependentUpon>FormTopUpGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormTransaksi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormTransaksi.Designer.cs">
+      <DependentUpon>FormTransaksi.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormUser.cs">
       <SubType>Form</SubType>
@@ -212,6 +221,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormTopUpGame.resx">
       <DependentUpon>FormTopUpGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormTransaksi.resx">
+      <DependentUpon>FormTransaksi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormUser.resx">
       <DependentUpon>FormUser.cs</DependentUpon>

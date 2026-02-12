@@ -9,7 +9,7 @@ using MySql.Data.MySqlClient;
 
 namespace Proyek_besar_pbo_baihaqi_zidan.Controller
 {
-    internal class Koneksi
+    public class Koneksi
     {
         private MySqlConnection koneksi;
 

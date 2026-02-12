@@ -9,7 +9,7 @@ using Proyek_besar_pbo_baihaqi_zidan.Model;
 
 namespace Proyek_besar_pbo_baihaqi_zidan.Controller
 {
-    internal class TransaksiController
+    public class TransaksiController
     {
         Koneksi koneksi = new Koneksi();
 

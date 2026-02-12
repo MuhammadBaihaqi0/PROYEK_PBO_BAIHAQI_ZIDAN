@@ -75,9 +75,9 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
                 };
 
                 // ADMIN → ParentForm
-                if (id_user == 1)
+                if (role == "Admin")
                 {
-                    string role = dt.Rows[0]["role"].ToString();
+                    role = dt.Rows[0]["role"].ToString();
                     ParentForm parent = new ParentForm(role);
                     parent.Show();
                     this.Hide();
@@ -98,7 +98,7 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
                     MessageBoxIcon.Error
                 );
             }
-            this.Close();
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
