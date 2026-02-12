@@ -78,14 +78,6 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
             topup.Show();
         }
 
-        private void laporanToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            foreach (Form frm in this.MdiChildren)
-                frm.Close();
 
-            FormTransaksi trans = new FormTransaksi();
-            trans.MdiParent = this;
-            trans.Show();
-        }
     }
 }

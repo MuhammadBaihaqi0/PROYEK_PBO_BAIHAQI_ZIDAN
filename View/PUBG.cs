@@ -205,6 +205,11 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information
                 );
+
+                // Show History
+                FormTransaksi history = new FormTransaksi();
+                history.Show();
+                this.Close();
             }
             else
             {

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using Proyek_besar_pbo_baihaqi_zidan.Controller;
 using Proyek_besar_pbo_baihaqi_zidan.Model;
+using Proyek_besar_pbo_baihaqi_zidan.View;
 
 namespace Proyek_besar_pbo_baihaqi_zidan
 {
@@ -222,6 +223,11 @@ namespace Proyek_besar_pbo_baihaqi_zidan
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information
                 );
+                
+                // Show History
+                FormTransaksi history = new FormTransaksi();
+                history.Show();
+                this.Close();
             }
             else
             {

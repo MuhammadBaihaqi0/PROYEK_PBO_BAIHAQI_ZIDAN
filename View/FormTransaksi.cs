@@ -30,13 +30,21 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
             this.dgvTransaksi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTransaksi.Location = new System.Drawing.Point(12, 12);
             this.dgvTransaksi.Name = "dgvTransaksi";
-            this.dgvTransaksi.Size = new System.Drawing.Size(776, 426);
+            this.dgvTransaksi.Size = new System.Drawing.Size(776, 380); // Reduced height to make room for button
             this.dgvTransaksi.TabIndex = 0;
             this.dgvTransaksi.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTransaksi.AllowUserToAddRows = false;
             this.dgvTransaksi.AllowUserToDeleteRows = false;
             this.dgvTransaksi.ReadOnly = true;
             this.Controls.Add(this.dgvTransaksi);
+
+            // Add Back Button
+            Button btnBack = new Button();
+            btnBack.Text = "Kembali ke Top Up";
+            btnBack.Location = new System.Drawing.Point(12, 400);
+            btnBack.Size = new System.Drawing.Size(150, 40);
+            btnBack.Click += (s, e) => { this.Close(); };
+            this.Controls.Add(btnBack);
 
             this.Load += new System.EventHandler(this.FormTransaksi_Load);
         }

@@ -15,12 +15,6 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
         public FormTopUpGame()
         {
             InitializeComponent();
-        }
-
-
-        public FormTopUpGame(string v)
-        {
-            InitializeComponent();
 
             this.TopLevel = false;
             this.FormBorderStyle = FormBorderStyle.None;
@@ -38,6 +32,10 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
             button5.MouseLeave += AllButtons_MouseLeave;
             button6.MouseEnter += AllButtons_MouseEnter;
             button6.MouseLeave += AllButtons_MouseLeave;
+        }
+
+        public FormTopUpGame(string v) : this()
+        {
         }
 
 

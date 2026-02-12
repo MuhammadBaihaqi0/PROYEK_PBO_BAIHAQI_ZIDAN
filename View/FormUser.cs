@@ -36,6 +36,8 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
             DataUser.Columns[1].HeaderText = "Username";
             DataUser.Columns[2].HeaderText = "Password";
             DataUser.Columns[3].HeaderText = "Role";
+
+            DataUser.Columns[2].Visible = false;
         }
 
         public void ResetForm()
