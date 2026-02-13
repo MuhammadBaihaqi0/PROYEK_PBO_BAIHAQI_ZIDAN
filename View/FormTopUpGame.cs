@@ -15,10 +15,11 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
         public FormTopUpGame()
         {
             InitializeComponent();
-
-            this.TopLevel = false;
-            this.FormBorderStyle = FormBorderStyle.None;
-            this.Dock = DockStyle.Fill;
+            
+            // Properties moved to caller (ParentForm) to allow standalone usage
+            // this.TopLevel = false;
+            // this.FormBorderStyle = FormBorderStyle.None;
+            // this.Dock = DockStyle.Fill;
 
             button1.MouseEnter += AllButtons_MouseEnter;
             button1.MouseLeave += AllButtons_MouseLeave;

@@ -77,7 +77,6 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
                 // ADMIN → ParentForm
                 if (role == "Admin")
                 {
-                    role = dt.Rows[0]["role"].ToString();
                     ParentForm parent = new ParentForm(role);
                     parent.Show();
                     this.Hide();
@@ -87,6 +86,7 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
                 {
                     FormTopUpGame topup = new FormTopUpGame();
                     topup.Show();
+                    this.Hide();
                 }
             }
             else

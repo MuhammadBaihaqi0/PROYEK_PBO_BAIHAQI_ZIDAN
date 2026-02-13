@@ -75,6 +75,8 @@ namespace Proyek_besar_pbo_baihaqi_zidan.View
 
             FormTopUpGame topup = new FormTopUpGame();
             topup.MdiParent = this;
+            topup.FormBorderStyle = FormBorderStyle.None; // Match previous child behavior
+            topup.Dock = DockStyle.Fill;
             topup.Show();
         }
 
